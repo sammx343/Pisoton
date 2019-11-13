@@ -41,7 +41,7 @@ $(document).ready(function(){
   if(isBanner == 1){
     $.ajax({
         type: "POST",
-        url: "https://comino.uninorte.edu.co/pisoton/admin/load_content.php",
+        url: URL.loadContent,
         data:{type:bannerType},
         success: function(mensaje)
         {
@@ -49,7 +49,7 @@ $(document).ready(function(){
             if(obj.exito == "1")
             {
               if(obj.datos[0]['isVideo'] == 0){
-                $(".bannerImg").css({'background-image': "url('https://comino.uninorte.edu.co/pisoton/admin/uploads/"+ obj.datos[0]['urlImage']+"')"});
+                $(".bannerImg").css({'background-image': "url('" + URL.uploads + obj.datos[0]['urlImage']+"')"});
               }else{
                 $("#banner iframe").attr('src',obj.datos[0]['link'].split("@")[0].replace('watch?v=', 'embed/')+"?autoplay=0&showinfo=0&controls=0&rel=0");
                 $("#banner iframe").css({'display':'block'});
@@ -77,7 +77,7 @@ $(document).ready(function(){
     });
     $.ajax({
         type: "POST",
-        url: "https://comino.uninorte.edu.co/pisoton/admin/load_articles.php",
+        url: URL.loadArticles,
         data:{filterArticles:filterArticles},
         success: function(mensaje)
         {
@@ -120,7 +120,7 @@ $(document).ready(function(){
     });
     $.ajax({
         type: "POST",
-        url: "https://comino.uninorte.edu.co/pisoton/admin/load_videoBlog.php",
+        url: URL.videoBlog,
         data:{filter:1},
         success: function(mensaje)
         {
@@ -149,7 +149,7 @@ $(document).ready(function(){
     var type = 1;
     $.ajax({
         type: "POST",
-        url: "https://comino.uninorte.edu.co/pisoton/admin/load_content.php",
+        url: URL.loadContent,
         data:{type:type},
         success: function(mensaje)
         {
@@ -209,7 +209,7 @@ $(document).ready(function(){
     if(bannerType == 3){
       $.ajax({
           type: "POST",
-          url: "https://comino.uninorte.edu.co/pisoton/admin/load_audios.php",
+          url: URL.loadAudios,
           data:{filter:1},
           success: function(mensaje)
           {
@@ -240,7 +240,7 @@ $(document).ready(function(){
     if(bannerType == 5){
       $.ajax({
           type: "POST",
-          url: "https://comino.uninorte.edu.co/pisoton/admin/load_history.php",
+          url: URL.loadHistory,
           data:{filter:'all'},
           success: function(mensaje)
           {
@@ -306,7 +306,7 @@ $(document).ready(function(){
     var desc = unescape($(this).parent().children('.activityDesc').val());
     var src = '';
     if($(this).parent().children('.activityImg').val() != 'null'){
-      var src = "https://comino.uninorte.edu.co/pisoton/admin/uploads/" + $(this).parent().children('.activityImg').val();
+      var src = URL.uploads + $(this).parent().children('.activityImg').val();
     }
     var srcPdf = $(this).parent().children('.downloader').val();
     if (srcPdf.indexOf('null') != -1){

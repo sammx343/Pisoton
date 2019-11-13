@@ -190,6 +190,7 @@
         </div>
       </div>
   </div>
+  <script src="js/environment.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/libs/bootstrap/bootstrap.min.js"></script>
   <script src="js/mobileSelect.js"></script>
