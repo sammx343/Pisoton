@@ -1,0 +1,39 @@
+.top_banner{
+	background-image: url(../../img/banner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+.infoEjemplo {
+    background-color: #d9edf7;
+}
+
+.btnestilOferta {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.margenes {
+	margin: 15px;
+}
+
+#editContentModal .modal-dialog{
+	width: 800px;
+}
+
+#editTrailerModal .modal-dialog{
+	width: 800px;
+}
+
+#triggerFile img,#triggerFileEdit img{
+  width: 32px;
+}
+.fileSelected {
+  background-color: #009688 !important;
+  border-color: #009688 !important;
+}
+#preview1,#edit-preview{
+	max-width: 500px;
+	max-height: 500px;
+}

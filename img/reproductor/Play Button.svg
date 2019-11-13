@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="43px" viewBox="0 0 44 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="WEB-PISOTON-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MAESTROS-DESKTOP-1440--Copy-2" transform="translate(-573.000000, -1246.000000)">
+            <g id="VIDEO-BLOG" transform="translate(217.000000, 931.000000)">
+                <g id="VIDEO-BLOG-QUE-HAGO" transform="translate(327.000000, 0.000000)">
+                    <g id="Play-Button" transform="translate(30.000000, 316.000000)">
+                        <ellipse id="Stroke" stroke="#E1E8EE" stroke-width="2" opacity="0.2" cx="21" cy="20.5" rx="21" ry="20.5"></ellipse>
+                        <path d="M19.591,13.8915203 L26.643,19.7379251 C27.119,20.1323061 27.119,20.8683537 26.643,21.2637108 L19.591,27.1081632 C18.955,27.6353061 18,27.1774727 18,26.3457584 L18,14.6549013 C18,13.823187 18.955,13.3643775 19.591,13.8915203" id="Icon" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
