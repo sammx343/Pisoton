@@ -23,16 +23,17 @@ if( domain.includes(DEV.root)){
     environment = PROD;
 }
 
-console.log(environment);
 
 const URL = {
-    loadContent: environment.root + "/pisoton/admin/load_content.php",
-    loadArticles: environment.root + "/pisoton/admin/load_articles.php",
-    loadAudios: environment.root + "/pisoton/admin/load_audios.php",
-    loadHistory: environment.root + "/pisoton/admin/load_history.php",
-    videoBlog: environment.root + "/pisoton/admin/load_videoBlog.php",
-    uploads: environment.root + "/pisoton/admin/uploads/"
+    loadContent: "/pisoton/admin/load_content.php",
+    loadArticles: "/pisoton/admin/load_articles.php",
+    loadAudios: "/pisoton/admin/load_audios.php",
+    loadHistory: "/pisoton/admin/load_history.php",
+    videoBlog: "/pisoton/admin/load_videoBlog.php",
+    uploads: "/pisoton/admin/uploads/"
 }
+
+console.log(URL.loadContent);
 
 
 
