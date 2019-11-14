@@ -1,4 +1,5 @@
 <?php
+  header("Access-Control-Allow-Origin: *");
   session_start();
   date_default_timezone_set('America/Bogota');
   if( !isset($_SESSION['authorized']) ) header('Location: login.php');

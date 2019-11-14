@@ -1,4 +1,5 @@
 <?php
+  	header("Access-Control-Allow-Origin: *");
 	require('lib/config.php');
 
 	class Informacion{

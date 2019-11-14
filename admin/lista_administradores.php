@@ -1,9 +1,11 @@
 <?php
+  header("Access-Control-Allow-Origin: *");
   session_start();
   if( !isset($_SESSION['authorized']) ) header('Location: login.php');
   //require('lib/config.php');
 ?>
 <?php
+  header("Access-Control-Allow-Origin: *");
     require('lib/config.php');
 
     //AGREGAR USUARIO

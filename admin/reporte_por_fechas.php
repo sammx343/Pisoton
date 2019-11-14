@@ -1,4 +1,5 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
 	require_once 'lib/pdoconnector.php';
 	require('lib/config.php');
 
