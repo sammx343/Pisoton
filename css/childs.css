@@ -5,7 +5,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: "SnoopyReg";
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
 }
 
 h2{
@@ -43,7 +43,7 @@ h2{
 }
 
 #main nav ul li {
-    font-family: "SnoopyReg";
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
     color: #FFF;
     text-align: center;
 }

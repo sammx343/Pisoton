@@ -551,6 +551,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   color: #FFF;
   font-size: 30px;
   font-weight: 600;
+  font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
   height: 60px;
   left: 0;
   line-height: 60px;
