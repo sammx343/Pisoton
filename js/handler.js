@@ -623,6 +623,8 @@ $(document).ready(function(){
       $('#main #backArrow').css({"display":"none"});
       $("#bg-left_bottom").css({"display":"none"});
       $("#bg-right_bottom").css({"display":"none"});
+      $("#bg-right_maxed").css({"display":"block"});
+      $("#bg-left_maxed").css({"display":"block"});
       $("#videoTagDiv").css({"border":"10px solid #FFF","width":"700px"});
       $("#bg-left").removeClass("long");
       $("#bg-right").removeClass("long");

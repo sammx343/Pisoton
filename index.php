@@ -17,11 +17,29 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/childs.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
   <div id="gamesLoader"></div>
+  <section class="banner children-navbar">
+    <div class="topnav parent" id="myTopnav">
+      <a href="pisoton.html">Pisotón</a>
+      <a href="padres.php" class="active">Padres</a>
+      <a href="maestros.html">Maestros</a>
+      <a href="index.php" >Las Aventuras de Ugo y Ema</a>
+      <a href="javascript:void(0);" class="icon" onclick="menuClickParent()">&#9776;</a>
+    </div>
+    <header>
+      <div class="headerWrapper">
+        <a href="index.php" ><img src="img/navbar/elementos-04.png"></a>
+        <a href="padres.php"><img src="img/padres/Padres-05.png"></a>
+        <a href="maestros.html"><img src="img/padres/Padres-02.png"></a>
+        <a href="pisoton.html"><img src="img/padres/Padres-03.png"></a>
+      </div>
+    </header>
+  </section>
   <section id="main">
     <h1 id="logo">
       <a href="index.php"></a>

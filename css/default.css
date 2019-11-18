@@ -884,9 +884,9 @@ header {
   display: flex;
   align-items: flex-start;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%;
-  z-index: 3;
+  z-index: 1100;
 }
 header.relHeader {
   position: relative;
