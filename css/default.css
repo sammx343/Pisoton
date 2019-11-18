@@ -27,7 +27,7 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -437,7 +437,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 #main #MainSubTitle {
   display: none;
   left: 50%;
-  margin: 0px;
+  margin: 0;
   top: 88px;
   position: absolute;
   text-align: center;
@@ -502,32 +502,9 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-#main nav ul li:first-child img {
-  -webkit-transform: scale(0.7, 0.7);
-  -moz-transform: scale(0.7, 0.7);
-  -ms-transform: scale(0.7, 0.7);
-  transform: scale(0.7, 0.7);
-}
-#main nav ul li:nth-child(2) img {
-  -webkit-transform: translate(12px, 0) scale(0.7, 0.7);
-  -moz-transform: translate(12px, 0) scale(0.7, 0.7);
-  -ms-transform: translate(12px, 0) scale(0.7, 0.7);
-  transform: translate(12px, 0) scale(0.7, 0.7);
-}
-#main nav ul li:nth-child(3) img {
-  -webkit-transform: scale(0.7, 0.7);
-  -moz-transform: scale(0.7, 0.7);
-  -ms-transform: scale(0.7, 0.7);
-  transform: scale(0.7, 0.7);
-}
-#main nav ul li:last-child {
-  margin-right: 0;
-}
-#main nav ul li:last-child img {
-  -webkit-transform: translate(-4px, 9px) scale(0.7, 0.7);
-  -moz-transform: translate(-4px, 9px) scale(0.7, 0.7);
-  -ms-transform: translate(-4px, 9px) scale(0.7, 0.7);
-  transform: translate(-4px, 9px) scale(0.7, 0.7);
+
+#main nav ul li img {
+  width: 75px;
 }
 #main #videoTagDiv {
   align-items: center;
@@ -790,7 +767,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 }
 #moreInfo .wrapper .otherPages .page .bgOtherPages {
   align-self: flex-end;
-  width: 60%;
+  width: 50%;
 }
 #moreInfo .wrapper .otherPages .page article {
   flex-basis: 50%;
@@ -813,9 +790,9 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 #moreInfo .linkPisoton {
   align-items: center;
   background-color: #eee;
-  background-image: url("../img/ninos/home-05-bg.png");
+  background-image: url("../img/ninos/home-11.png");
   background-repeat: repeat-x;
-  color: #4D4D4D;
+  color: #FFF;
   display: flex;
   flex-direction: column;
   margin-top: 59px;
@@ -826,10 +803,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 }
 #moreInfo .linkPisoton p {
   margin: 20px;
-  max-width: 765px;
+  max-width: 350px;
 }
 #moreInfo .linkPisoton a {
-  color: #85ccdb;
+  color: #FFF;
   font-style: italic;
   margin-bottom: 30px;
 }

@@ -1,0 +1,81 @@
+
+@font-face {
+    font-family: "SnoopyReg";
+    src: url("../fonts/snoopy_reg.otf");
+}
+
+h1, h2, h3, h4 {
+    font-family: "SnoopyReg";
+}
+
+h2{
+    padding: 0;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.parent-subtitle{
+    color: #000;
+}
+
+.pisoton-text {
+    width: 100%;
+}
+
+#main nav ul{
+    margin: 20px 0;
+}
+
+#main nav ul li .navLiWrapper{
+    height: 75px;
+    top: 0px;
+    transition: .25s all;
+}
+ 
+#main nav ul li .navLiWrapper:hover{
+    top: -10px;
+}
+
+#main nav ul li.active .navLiWrapper::before{
+    display: none;
+}
+
+#main nav ul li {
+    font-family: "SnoopyReg";
+    color: #FFF;
+    text-align: center;
+}
+
+#main nav ul li img, #main nav ul li p{
+    position: relative;
+}
+
+#main nav ul li.active img {
+    box-shadow: white 0 0 50px 5px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#moreInfo .wrapper .otherPages .page:first-child article{
+    padding-left: 0;
+}
+
+#moreInfo .wrapper .otherPages .page:first-child article h2{
+    color: #EA6A5B;
+}
+
+#moreInfo .wrapper .otherPages .page:last-child article{
+    padding-right: 0;
+}
+
+#moreInfo .wrapper .otherPages .page:last-child article h2{
+    color: #F4A300;
+}
+
+@media (min-width: 768px) { 
+    .pisoton-text {
+        width: auto;
+    }
+}

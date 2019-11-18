@@ -15,7 +15,9 @@
     <title></title>
     <meta name="viewport" content="width=device-width, user-scalable=no" >
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/childs.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
@@ -53,21 +55,25 @@
             <div class="navLiWrapper">
               <img src="img/ninos/juegos.png" alt="games"/>
             </div>
+            <p>Juegos</p>
           </li>
           <li id="activities">
             <div class="navLiWrapper">
               <img src="img/ninos/actividades.png" alt="activities"/>
             </div>
+            <p>Actividades</p>
           </li>
           <li id="songs">
             <div class="navLiWrapper">
               <img src="img/ninos/canciones.png" alt="songs"/>
             </div>
+            <p>Canciones</p>
           </li>
           <li id="tv">
             <div class="navLiWrapper">
               <img src="img/ninos/series.png" alt="tv"/>
             </div>
+            <p>Serie animada</p>
           </li>
         </ul>
       </nav>
@@ -91,23 +97,23 @@
     <div class="wrapper">
       <div class="otherPages">
         <div class="page">
-          <img class="bgOtherPages" src="img/ninos/home-01.png" alt="padres">
-          <article>
-            <img src="img/ninos/home-02.png" alt="padres">
-            <p>
+          <img class="bgOtherPages" src="img/ninos/home-09.png" alt="padres">
+          <article class="pl-5 pl-md-0">
+            <!-- <img src="img/ninos/home-02.png" alt="padres"> -->
+            <h2 class="mb-2"> Papá, mamá, cuidadores </h2>
+            <p class="mb-3">
               Si eres  padre y quieres aprender más sobre el adecuado desarrollo de tus hijos y cómo ayudarles a crecer, haz click aquí. <a href="padres.php">Ver mas...</a>
             </p>
           </article>
         </div>
         <div class="page">
           <article>
-            <img src="img/ninos/home-04.png" alt="maestros">
-            <p>
+            <h2 class="mb-2"> Maestros, agentes educativos, tutores </h2>
+            <p class="mb-3">
               Para un maestro, seguir aprendiendo es parte de su día a día, entra aquí y conoce más sobre el adecuado desarrollo psicoafectivo de los niños y niñas.  <a href="maestros.html">Ver mas...</a>
             </p>
-
           </article>
-          <img class="bgOtherPages" src="img/ninos/home-03.png" alt="padres">
+          <img class="bgOtherPages" src="img/ninos/home-10.png" alt="maestros">
         </div>
       </div>
       <!--<div>
@@ -150,12 +156,14 @@
         </div>
       </div>-->
     </div>
-    <div class="linkPisoton">
-      <img src="img/ninos/pisotonlogo2.png" alt="pisoton" width="250">
-      <p>
-        Por más de dos décadas, Pisotón contribuye a que los niños y niñas se desarrollen con carácter fuerte, sin violencia ni sumisión; dejando así una huella de impresión y resignificación en sus vidas.  Sin embargo, la tarea continúa y el camino que debemos recorrer juntos, es largo. ¡Acompáñanos!
-      </p>
-      <a href="pisoton.html">Leer mas...</a>
+    <div class="linkPisoton flex-row justify-content-center flex-wrap align-items-center p-5">
+      <img class="m-0 my-5 pr-lg-5 mr-md-5" src="img/ninos/pisoton-logo-white.png" alt="pisoton" width="250">
+      <div class="pisoton-text text-center text-md-left">
+        <p class="m-0 mb-4 mx-auto">
+          Por más de dos décadas trabajamos incansablemente con, por y para a infancia. Entérate por qué y como lo hacemos ...
+        </p>
+        <a href="pisoton.html">haciendo click aquí</a>
+      </div>
     </div>
   </section>
   <footer class="kid">

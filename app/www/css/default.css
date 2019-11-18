@@ -358,7 +358,7 @@ h2 {
   transform: translate(-50%, 0);
 }
 #main nav ul {
-  margin: 0;
+  margin: 10px 0;
 }
 #main nav ul li {
   cursor: pointer;
