@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/childs.css">
     <link rel="stylesheet" href="css/game-panel.css">
@@ -51,16 +52,6 @@
     <div id="backArrow">
       <img src="img/ninos/juegos-01.png" />
     </div>
-    <!--<div class="topnav" id="myTopnav">
-      <a href="pisoton.html">Pisotón</a>
-      <a href="padres.php">Padres</a>
-      <a href="maestros.html">Maestros</a>
-      <a href="#" class="active">Niños</a>
-      <a href="#blog">Video Blog</a>
-      <a href="#Contacto">Contacto</a>
-      <a href="javascript:void(0);" class="icon" onclick="menuClick()">&#9776;</a>
-    </div>-->
-
     <article>
       <div id="bg-left"></div>
       <div id="bg-left_bottom"></div>
@@ -102,23 +93,13 @@
         </div>
       </div>
     </article>
-    <!--Button Sounds-->
-    <!--<audio preload="auto" autoplay="" id="MOactividades"> <source src="audio/MOactividades.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MCactividades"> <source src="audio/MCactividades.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MOjuegos"> <source src="audio/MOjuegos.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MCjuegos"> <source src="audio/MCjuego.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MOcanciones"> <source src="audio/MOcanciones.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MCcanciones"> <source src="audio/MCcanciones.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MOseries"> <source src="audio/MOseries.mp3"></source> </audio>
-    <audio preload="auto" autoplay="" id="MCseries"> <source src="audio/MCseries.mp3"></source> </audio>-->
   </section>
   <section id="moreInfo">
     <div class="wrapper">
-      <div class="otherPages">
+      <div class="otherPages otherPages pr-4 pr-md-0">
         <div class="page">
           <img class="bgOtherPages" src="img/ninos/home-09.png" alt="padres">
           <article class="pl-5 pl-md-0">
-            <!-- <img src="img/ninos/home-02.png" alt="padres"> -->
             <h2 class="mb-2"> Papá, mamá, cuidadores </h2>
             <p class="mb-3">
               Si eres  padre y quieres aprender más sobre el adecuado desarrollo de tus hijos y cómo ayudarles a crecer, haz click aquí. <a href="padres.php">Ver mas...</a>
@@ -135,47 +116,8 @@
           <img class="bgOtherPages" src="img/ninos/home-10.png" alt="maestros">
         </div>
       </div>
-      <!--<div>
-        <h4><a href="index.html">Niños</a></h4>
-      </div>
-      <div>
-        <h4><a href="padres.php">Padres</a></h4>
-        <ul>
-          <li><a href="padres.php#blog">Video Blog</a></li>
-          <li><a href="padres.php#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="maestros.html">Maestros</a></h4>
-        <ul>
-          <li><a href="maestros.html#blog">Video Blog</a></li>
-          <li><a href="maestros.html#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="pisoton.html">Pisotón</a></h4>
-        <ul>
-          <li><a href="pisoton.html#articles">Artículos</a></li>
-          <li><a href="pisoton.html#cronology">Cronología</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Newsletter</h4>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
-        <span>
-          <input type ="text" placeholder="Email"></input>
-          <img src="img/ninos/telegram.jpg"/>
-        </span>
-        <div id="networks">
-          <img src="img/ninos/facebook_icon.png" alt="facebook">
-          <img src="img/ninos/twitter_icon.png" alt="twitter">
-          <img src="img/ninos/feeds_icon.png" alt="feeds">
-          <img src="img/ninos/instagram_icon.png" alt="instagram">
-          <img src="img/ninos/google_icon.png" alt="google">
-        </div>
-      </div>-->
     </div>
-    <div class="linkPisoton flex-row justify-content-center flex-wrap align-items-center p-5">
+    <div class="linkPisoton flex-row justify-content-center flex-wrap align-items-center">
       <img class="m-0 my-5 pr-lg-5 mr-md-5" src="img/ninos/pisoton-logo-white.png" alt="pisoton" width="250">
       <div class="pisoton-text text-center text-md-left">
         <p class="m-0 mb-4 mx-auto">
@@ -218,7 +160,7 @@
       </div>
   </div>
   <script src="js/libs/jquery/jquery.js"></script>
-  <script src="js/libs/bootstrap/bootstrap.min.js"></script>s
+  <script src="js/libs/bootstrap/bootstrap.min.js"></script>
   <script src="js/mobileSelect.js"></script>
   <script src="js/handler.js"></script>
   <script src="js/gameQuestionController.js"></script>
