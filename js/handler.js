@@ -657,8 +657,13 @@ $(document).ready(function(){
         $("#videoTagDiv").css({"border":"none"});
         $("#gamesLoader").html("<div id='game01'>\
                                     <iframe style='width:"+width+"px;height:"+height+"px' class='gameFrame' src='https://comino.uninorte.edu.co/pisoton/games/ComoMeSiento/index.html'></iframe>\
-                                    <p id='linkVideoRef'>Ir al video</p> \
                                     <img id='closeGame' style='top:"+top+"px !important;left:"+left+"px !important' src='img/ninos/closeGame.png'/>\
+                                    <div class='game-question-modal'>\
+                                      <div class='game-video-question'>\
+                                        <p class='bg-primary' id='linkVideoRef'>Ir al video</p> \
+                                        <p class='bg-success' id='closeVideoPanel'>Seguir Jugando</p> \
+                                      </div> \
+                                    </div>\
                                   </div>");
         $("#gamesLoader").css({"display":"block"});
         $("body").css({"overflow":"hidden"});

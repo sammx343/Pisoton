@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/childs.css">
+    <link rel="stylesheet" href="css/game-panel.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
@@ -216,10 +217,11 @@
         </div>
       </div>
   </div>
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+  <script src="js/libs/jquery/jquery.js"></script>
+  <script src="js/libs/bootstrap/bootstrap.min.js"></script>s
   <script src="js/mobileSelect.js"></script>
   <script src="js/handler.js"></script>
+  <script src="js/gameQuestionController.js"></script>
     <!--<script src="js/libs/jqueryValidate/jqueryvalidate.js"></script>-->
     <!--<script src="js/formhandler.js"></script>-->
 </body>

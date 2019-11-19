@@ -46,6 +46,7 @@ h2{
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
     color: #FFF;
     text-align: center;
+    margin: 5px 0;
 }
 
 #main nav ul li img, #main nav ul li p{
