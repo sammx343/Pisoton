@@ -5,16 +5,14 @@ $(document).ready(function() {
         data:{filter:'all'},
         success: function(mensaje)
         {
-            //alert(mensaje);
-            var obj = JSON.parse(mensaje);
+            let obj = JSON.parse(mensaje);
             if(obj.exito == "1")
             {
-                var storyHtml = ''
                 $('.stories .feature-story').html(createStoryHtml(obj.datos[0], true));
                 
+                let storyHtml = ''
                 storyHtml += createStoryHtml(obj.datos[1], false);
                 storyHtml += createStoryHtml(obj.datos[2], false);
-
                 $(".stories .old-stories").html(storyHtml);
             }
             else
@@ -42,6 +40,6 @@ $(document).ready(function() {
                         <!--<p class='description'>${story['title']}</p>-->
                         <a href="histories.php?f=2&history=${story['idHistorias']}" class='btn-pisoton'> Ir al Artículo...</a>
                     </div>\
-                </div>`
+                </div>`;
     }
 });

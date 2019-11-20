@@ -1,0 +1,43 @@
+.btn-pisoton{
+    width: fit-content;
+    position: relative;
+    top: 0;
+    padding: 10px 30px;
+    background: rgb(234, 106, 91);
+    border-radius: 25px;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #FFF;
+    box-shadow: black 2px 2px 5px;
+    transition: .25s all;
+}
+
+
+.btn-pisoton:hover{
+    color: #FFF;
+    text-decoration: none;
+    background: rgb(212, 87, 76) !important;
+    top: -5px;
+    box-shadow: #000 5px 5px 5px;
+}
+
+.btn-custom-secondary{
+    width: fit-content;
+    position: relative;
+    top: 0;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background: #68D5E1;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #FFF;
+    box-shadow: black 2px 2px 5px;
+    transition: .25s all;
+}
+
+.btn-custom-secondary:hover{
+    text-decoration: none;
+    background: rgb(88, 183, 194) !important;
+    top: -5px;
+    box-shadow: #000 5px 5px 5px;
+}

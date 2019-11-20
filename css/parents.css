@@ -1,0 +1,169 @@
+#anarita{
+    padding: 0;
+    background: #68D5E1;
+}
+
+#anarita .information{
+    padding: 0;
+    margin-right: 20px;
+    background: #FFF;
+}
+
+#banner #overlay_back{
+    max-width: initial;
+}
+
+#banner .parents-hero article {
+    left: 0%;
+    margin: auto;
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+
+#banner .parents-hero .articleLink{
+    margin: auto;
+    transform: none;
+    left: 0;
+}
+
+.bannerImg{
+    background-position: top center;  
+    max-width: initial; 
+    top: 0; 
+}
+
+.generalWrapper h2{
+    margin: 0;
+    font-size: 5rem !important;
+    line-height: 4rem !important;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+.sectionHeader{
+    position: relative;
+    z-index: 1000;
+    background-color: rgb(234, 106, 91);
+    height: auto;
+    padding: 40px;
+    line-height: 40px;
+}
+
+.sectionHeader h3{
+    font-size: 2.5rem;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+.sectionHeader .btn {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000;
+    margin-left: 0;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+.sectionHeader .btn:hover {
+    cursor: pointer;
+    background: #EEE;
+}
+
+.visual-information{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.visual-information .information{
+    width: 300px;
+    padding: 10px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.visual-information .information h3{ 
+    font-size: 2rem;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    color: #68D5E1;
+}
+
+.visual-information .infography .card{
+    height: 100%;
+    border-radius: 15px;
+}
+
+.visual-information .infography img{
+    width: 210px;
+    height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.videoblog{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    color: #FFF;
+}
+
+.videoblog .pretitle, .videoblog .postitle{
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.videoblog .pretitle{
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FFF;
+}
+
+.videoblog .text{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.videoblog .btn{
+    width: fit-content;
+    padding: 10px 30px;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.videoblog #videoblog-frame{
+    width: 450px;
+    height: 250px;
+    max-width: 100%;
+}
+
+
+@media (min-width: 576px) { 
+    .bannerImg{
+        top: 20px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .bannerImg{
+        top: 30px;
+    }
+}
+
+@media (min-width: 992px) { 
+    .visual-information{
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .videoblog .btn{
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .bannerImg{
+        top: 50px;
+    }
+}
