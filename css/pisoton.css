@@ -35,18 +35,25 @@
 
 .btn-pisoton{
     width: fit-content;
+    position: relative;
+    top: 0;
     padding: 10px 30px;
     background: rgb(234, 106, 91);
     border-radius: 25px;
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     color: #FFF;
+    box-shadow: black 2px 2px 5px;
+    transition: .25s all;
 }
+
 
 .btn-pisoton:hover{
     color: #FFF;
     text-decoration: none;
     background: rgb(212, 87, 76);
+    top: -5px;
+    box-shadow: #000 5px 5px 5px;
 }
 
 .weAre h2
@@ -97,6 +104,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
+    box-shadow: black 2px 2px 5px;
 }
 
 .stories .feature-story{
@@ -112,8 +120,8 @@
     display: flex;
 }
 
-.stories .feature-story .story{
-    justify-content: flex-end;
+.stories .old-stories{
+    max-width: 100%;
 }
 
 .stories .information{
@@ -127,10 +135,9 @@
     background-color: #68D5E1;
 }
 
-.transcendental-stories h2, .transcendental-stories h3{
+.transcendental-stories h2, .transcendental-stories h3, .transcendental-stories h4{
     padding: 0;
     margin: 0;
-    margin-bottom: 20px;
     text-transform: initial;
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
     color: #FFF;
@@ -140,14 +147,34 @@
 .transcendental-stories h2{
     text-align: center;
     font-size: 2.5rem;
+    margin-bottom: 50px;
 }
 
 .transcendental-stories h3{
     font-size: 2rem;
+    margin-bottom: 10px;
 }
+
+.transcendental-stories h4{
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    font-style: italic;
+}
+
 
 .transcendental-stories .story p{
     color: #FFF;
+}
+
+.who-we-are a:first-child{
+    position: relative;
+    top: 0;
+    transition: .5s all;
+}
+
+.who-we-are a:first-child:hover{
+    top: 10px;
 }
 
 @media (min-width: 597px) { 
@@ -168,8 +195,24 @@
     .who-we-are a:last-child{
         position: relative;
         top: -40px;
+        transition: .5s all;
+    }
+
+    .who-we-are a:last-child:hover{
+        position: relative;
+        top: -30px;
     }
 }
 
-@media (max-width: 597px) { 
+@media (max-width: 768px){
+    .stories .feature-story .profile-image{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 992px) { 
+    .stories{
+        flex-wrap: wrap;
+    }
 }
