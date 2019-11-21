@@ -76,21 +76,22 @@
       </div>
     </div>
 
-    <div class="information">
-      <div id="blog">
-        <article>
-          <div>
-            
-          </div>
-          <!-- Generated from parents.js -->
-        </article>
+    <div class="information-resources pt-3">
+      <div class="articles-links py-2 py-lg-5">
+          <a class="mb-5 mr-lg-4 text-lg-right" href="articles.php"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
+          <a class="mb-3 text-lg-left" href="/articles.php"><img src="img/padres/elementos-40.png" alt="Razones y corazones"></a>
       </div>
-      <div id="downloader">
-        <div class="arrowLeft"><img src="img/pisoton/friends/ICONO_IZQ.png"/></div>
-        <div class="arrowRight"><img src="img/pisoton/friends/ICONO_DER.png"/></div>
-        <div id="downloaderSlider" class="pisoton_slider">
-          <div class="sliderContent">
-
+      <div class="images-to-color">
+        <div class="info">
+          <h2 class="mb-3"> Colorea en familia</h2>
+          <p class="mb-4">Conoce a los personajes de la divertida serie Las Aventuras de Ugo y Ema, y junto a tus hijos, colorea en casa</p>
+        </div>
+        <div id="downloader">
+          <div class="arrowLeft"><img src="img/pisoton/friends/ICONO_IZQ.png"/></div>
+          <div class="arrowRight"><img src="img/pisoton/friends/ICONO_DER.png"/></div>
+          <div id="downloaderSlider" class="pisoton_slider">
+            <div class="sliderContent">
+            </div>
           </div>
         </div>
       </div>

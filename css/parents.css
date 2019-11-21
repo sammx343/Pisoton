@@ -3,9 +3,58 @@
     background: #68D5E1;
 }
 
+#anarita #downloader{
+    margin: auto;
+    width: 80%;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#anarita #downloader .arrowLeft, #anarita #downloader .arrowRight{
+    filter: opacity(0.5) drop-shadow(0 0 0 green);
+}
+
+#anarita #downloader .pdfBoxes{
+    background: rgb(234, 106, 91) !important;
+    border-radius: 15px;
+    box-shadow: none;
+}
+
+#anarita #downloader .pdfBoxes a{
+    position: relative;
+    top: 0;
+    padding: 5px 20px;
+    margin: 10px 0;
+    color: #000 !important;
+    text-decoration: none;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: #000 2px 2px 5px;
+    transition: .25s all;
+}
+
+#anarita #downloader .pdfBoxes article .boxUpperTitle{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#anarita #downloader .pdfBoxes a:hover{
+    top: -5px;
+    box-shadow: #000 5px 5px 5px;
+}
+
+#anarita #downloader #downloaderSlider .sliderContent{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
 #anarita .information{
     padding: 0;
     margin-right: 20px;
+    background: #FFF;
+}
+
+#anarita .information-resources{
     background: #FFF;
 }
 
@@ -38,6 +87,49 @@
     font-size: 5rem !important;
     line-height: 4rem !important;
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+.information-resources .articles-links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.information-resources .articles-links img{
+    width: 800px;
+    max-width: 70%;
+    position: relative;
+    top: 0;
+    background: #64B6ED;
+    border-radius: 10px;
+    box-shadow: #000 2px 2px 5px;
+    transition: .25s all;
+}
+
+.information-resources .articles-links img:hover{
+    top: -5px;
+    box-shadow: #000 5px 5px 5px;
+}
+
+.images-to-color{
+    text-align: center;
+}
+
+.images-to-color .info h2{
+    max-width: 90%;
+    margin: auto;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    color: #68D5E1;
+}
+
+.images-to-color .info  p{
+    max-width: 90%;
+    margin: auto;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #000;
 }
 
 .sectionHeader{
@@ -152,6 +244,10 @@
 }
 
 @media (min-width: 992px) { 
+    .information-resources .articles-links{
+        flex-wrap: nowrap;
+    }
+
     .visual-information{
         flex-wrap: nowrap;
         text-align: left;
