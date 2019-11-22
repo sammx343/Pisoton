@@ -1,0 +1,154 @@
+#dataEmotion{
+    margin-top: 0;
+}
+
+#dataEmotion #dataEmotionHeader .circleLink{
+    position: relative;
+    top: 0;
+    transition: .5s all;
+    padding: 50% 20px 20px 20px;
+    margin: 0;
+}
+
+#dataEmotion #dataEmotionHeader .circleLink:hover{
+    animation: shake 1s;
+    top: -10px;
+}
+
+#emotionHeader{
+    margin: 0;
+    min-height: 80vh;
+}
+
+#emotionHeader::before{
+    content: none;
+}
+
+#emotionHeader::after{
+    content: none;
+}
+
+#emotionHeader .title{
+    display: flex;
+    flex-basis: 50% !important;
+    align-items: center;
+    justify-content: center;
+    background: #68D5E1;
+    text-align: left;
+}
+
+#emotionHeader h2{
+    width: min-content;
+    padding: 0;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #FFF;
+    text-transform: initial;
+}
+
+#emotionHeader .imageDesc{
+    background-image: url('../img/pisoton/NOSEMOCIONAEDUCAR.JPG');
+    background-size: cover;
+    flex-basis: 50% !important;
+}
+
+#info.intern article.emotion-row .quote1{
+    color: #88CCDB;
+    flex-basis: 40%;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#info.intern article.emotion-row .desc{
+    text-align: center;
+}
+
+.hearts-reached {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.hearts-reached h2{
+    width: auto;
+    margin: 5px 0;
+    padding: 0;
+    color: #68D5E1;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: none;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+@media (min-width: 525px) { 
+    #emotionHeader{
+        margin-top: 50px;
+    }
+
+    #emotionHeader h2, .hearts-reached h2{
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) { 
+
+    #emotionHeader h2, .hearts-reached h2{
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
+
+    .bannerImg{
+        top: 30px;
+    }
+
+    .hearts-reached {
+        text-align: left;
+        margin: 0;
+    }
+
+    .hearts-reached h2{
+        width: min-content;
+    }
+}
+
+@media (min-width: 992px) { 
+    
+    #info.intern article.emotion-row .desc{
+        text-align: left;
+    }
+ }
+
+@media (min-width: 1200px) { 
+    .hearts-reached {
+        width: 60%;
+    }
+
+    #emotionHeader h2, .hearts-reached h2{
+        font-size: 6rem;
+        line-height: 5rem;
+    }
+ }

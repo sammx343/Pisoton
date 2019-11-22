@@ -230,6 +230,8 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   font-size: 40px;
   display: block;
   padding: 14px 14px;
+  background: rgba(0.1, 0.1, 0.1, 0.2);
+  border-radius: 5px;
 }
 
 .topnav.parent.whiteBg a.icon {
@@ -2962,9 +2964,6 @@ header .headerWrapper.pisotonB::before {
   #info.intern article.emotion-row .desc {
     margin-right: 0;
   }
-  #info.intern article.emotion-row.leftAlign {
-    align-items: flex-start;
-  }
   #info.intern article.width800 {
     width: 80%;
   }
@@ -3563,6 +3562,7 @@ header .headerWrapper.pisotonB::before {
 
   #myTopnav {
     display: block;
+    z-index: 2000;
   }
 
   #moreInfo .wrapper .otherPages .page .bgOtherPages {
