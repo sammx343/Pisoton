@@ -96,9 +96,12 @@
     text-align: center;
 }
 
+.information-resources .articles-links a{
+    max-width: 90%;
+}
+
 .information-resources .articles-links img{
     width: 800px;
-    max-width: 70%;
     position: relative;
     top: 0;
     background: #64B6ED;
@@ -236,11 +239,19 @@
     .bannerImg{
         top: 20px;
     }
+
+    .information-resources .articles-links a{
+        max-width: 70%;
+    }
 }
 
 @media (min-width: 768px) { 
     .bannerImg{
         top: 30px;
+    }
+
+    .information-resources .articles-links a{
+        max-width: 45%;
     }
 }
 
@@ -262,5 +273,9 @@
 @media (min-width: 1200px) { 
     .bannerImg{
         top: 50px;
+    }
+
+    .information-resources .articles-links a{
+        max-width: 35%;
     }
 }

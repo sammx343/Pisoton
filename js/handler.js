@@ -263,10 +263,9 @@ $(document).ready(function(){
       htmlReasons = '';
       for (var i = 0; i < arrayReasons.length; i++) {
         htmlReasons += '<article class="card"> \
-                          <p class="cardTitle">Razones</p> \
                           <p class="cardDescTitle"> Razón No. '+ (i + 1) +'</p> \
                           <p class="cardDesc">'+ arrayReasons[i] +'</p> \
-                          <a href="reasons.php?f=2&reason='+i+'">Ver más</a> \
+                          <a href="reasons.php?f=2&reason='+i+'" class="btn-pisoton my-2">Ver más</a> \
                         </article>'
       }
       $('.opt_content_reasons').html(htmlReasons);

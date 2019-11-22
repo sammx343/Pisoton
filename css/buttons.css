@@ -7,7 +7,7 @@
     border-radius: 25px;
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    color: #FFF;
+    color: #FFF !important;
     box-shadow: black 2px 2px 5px;
     transition: .25s all;
 }

@@ -77,8 +77,8 @@
     </div>
 
     <div class="information-resources pt-3">
-      <div class="articles-links py-2 py-lg-3">
-          <a class="mb-3 mr-lg-4 text-lg-right" href="articles.php"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
+      <div class="articles-links py-2 py-lg-3 px-1 px-md-3">
+          <a class="mb-3 mr-md-3 text-lg-right" href="articles.php"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
           <a class="mb-5 text-lg-left" href="/articles.php"><img src="img/padres/elementos-40.png" alt="Razones y corazones"></a>
       </div>
       <div class="images-to-color">
