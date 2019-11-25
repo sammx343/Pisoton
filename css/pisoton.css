@@ -151,7 +151,7 @@
 }
 
 .who-we-are a:first-child:hover{
-    top: 10px;
+    top: -10px;
 }
 
 @media (min-width: 597px) { 
@@ -177,7 +177,7 @@
 
     .who-we-are a:last-child:hover{
         position: relative;
-        top: -30px;
+        top: -50px;
     }
 }
 
