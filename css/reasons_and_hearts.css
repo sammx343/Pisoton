@@ -21,6 +21,7 @@
 
 .card .cardDesc{
     font-size: 1rem;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-overflow: unset;
     display: -webkit-box;
     -webkit-line-clamp: 9;

@@ -128,11 +128,11 @@
     color: #68D5E1;
 }
 
-.images-to-color .info  p{
+.images-to-color .info p{
     max-width: 90%;
     margin: auto;
-    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     color: #000;
 }
 
