@@ -1,0 +1,28 @@
+.generalWrapper article{
+    width: 90% !important;
+}
+
+.sectionHeader{
+    background: #F4A300;
+}
+
+.teachers.bannerImg{
+    top: 0;
+    background-position: 0 50% !important;
+}
+
+#formPis button{
+    margin: 1%;    
+}
+
+@media (min-width: 768px) { 
+    .generalWrapper article{
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 587px){
+    #banner article {
+        bottom: 20%;
+    }
+}
