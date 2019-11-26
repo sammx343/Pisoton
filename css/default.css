@@ -3723,6 +3723,7 @@ header .headerWrapper.pisotonB::before {
     height: auto;
     padding-right: 0;
   }
+  
   #main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox .desc:after {
     display: none;
   }
