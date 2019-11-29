@@ -1,8 +1,107 @@
-
-.children-navbar{
-
+#main {
+    margin-top: 70px;
 }
 
 .children-navbar .headerWrapper a:first-child img{
     height: 80px;
+}
+
+.navbar-pisoton{
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+  
+.navbar-pisoton .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 70px;
+    text-align: center;
+    padding: 20px 5px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    box-shadow: black 3px 1px 5px;
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: .5s all;
+}
+
+.navbar-pisoton .nav-link:hover {
+    height: 90px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: black 5px 5px 5px;
+}
+
+.navbar-pisoton .nav-link:first-child{
+    width: 40%;
+    padding: 50px 30px 50px 30px;
+    border-bottom-right-radius: 50px;
+    font-size: 3rem;
+    line-height: 2rem;
+    align-items: center;
+    z-index: 1100;
+    box-shadow: black 1px 2px 5px;
+}
+
+.navbar-pisoton .nav-link:first-child:hover {
+    height: 130px;
+}
+
+.navbar-pisoton .nav-link:nth-child(2){
+    margin-left: -5px;
+    width: 25%;
+}
+
+.navbar-pisoton .nav-link.adventures-link{
+    background: #885E97;
+}
+
+.navbar-pisoton .nav-link.parents-link{
+    background: #EA6A5B;
+}
+.navbar-pisoton .nav-link.teachers-link{
+    background: #F4A300;
+}
+.navbar-pisoton .nav-link.pisoton-link{
+    background: #68D5E1;
+    font-size: 1.7rem;
+}
+
+
+/* This is to cover the stupid mess of legacy code that the idiot before me left behind */
+@media (max-width: 768px){
+    #myTopnav {
+        display: block;
+        width: 90%;
+        z-index: 2000;
+        right: 20px;
+        top: 20px;
+        transform: translate(0, 0);
+    }
+
+    #main {
+        margin-top: 0;
+    }
+
+    .topnav.parent a {
+        color: #30c7ec;
+        display: none;
+        font-size: 20px;
+        padding: 5px 77px 5px 10px;
+    }
+
+    .topnav.parent a.icon {
+        display: block;
+    }
+
+    .navbar-pisoton{
+        display: none;
+    }
 }

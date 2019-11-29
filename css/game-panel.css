@@ -1,4 +1,38 @@
 
+#main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox{
+   border-bottom: none; 
+}
+
+#main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox p{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;    
+    height: 40px;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    -ms-line-clamp: 2;
+    line-clamp: 2;
+}
+
+#main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox .desc{
+    -webkit-line-clamp: 4;
+    -moz-line-clamp: 4;
+    -ms-line-clamp: 4;
+    line-clamp: 4;
+    max-height: 75px;
+    transition: 1s all;
+}
+
+#main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox:hover .desc{
+    -webkit-line-clamp: initial;
+    -moz-line-clamp: initial;
+    -ms-line-clamp: initial;
+    line-clamp: initial;
+    max-height: 300px;
+    transition: 1s all;
+}
+
+#main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider{
+    align-items: flex-start;
+}
 
 .game-question-modal{
     width: 100%;
@@ -44,3 +78,4 @@
     font-weight: bold;
     position: relative;
 }
+

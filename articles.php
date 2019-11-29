@@ -69,47 +69,6 @@
   </section>
 
   <section id="moreInfo" class="maxWidth">
-    <!--<div class="wrapper">
-      <div>
-        <h4><a href="index.html">Niños</a></h4>
-      </div>
-      <div>
-        <h4><a href="padres.php">Padres</a></h4>
-        <ul>
-          <li><a href="padres.php#blog">Video Blog</a></li>
-          <li><a href="padres.php#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="maestros.html">Maestros</a></h4>
-        <ul>
-          <li><a href="maestros.html#blog">Video Blog</a></li>
-          <li><a href="maestros.html#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="pisoton.html">Pisotón</a></h4>
-        <ul>
-          <li><a href="pisoton.html#articles">Artículos</a></li>
-          <li><a href="pisoton.html#cronology">Cronología</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Newsletter</h4>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
-        <span>
-          <input type ="text" placeholder="Email"></input>
-          <img src="img/ninos/telegram.jpg"/>
-        </span>
-        <div id="networks">
-          <img src="img/ninos/facebook_icon.png" alt="facebook">
-          <img src="img/ninos/twitter_icon.png" alt="twitter">
-          <img src="img/ninos/feeds_icon.png" alt="feeds">
-          <img src="img/ninos/instagram_icon.png" alt="instagram">
-          <img src="img/ninos/google_icon.png" alt="google">
-        </div>
-      </div>
-    </div>-->
   </section>
   <footer>
     <div class="footerWrapper">
@@ -125,7 +84,7 @@
           <input id="newsFormEmail" type ="text" placeholder="Email"></input>
           <img id="newsFormRegister" src="img/ninos/telegram.png"/>
         </span>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+        <p>Suscríbete para recibir más información</p>
       </div>
       <a href="pisoton.html"><img id="logoPisoton" src="img/ninos/home-07.png" alt="pisoton"/></a>
     </div>

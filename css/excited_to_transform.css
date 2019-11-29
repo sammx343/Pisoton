@@ -38,7 +38,10 @@
 }
 
 #emotionHeader h2{
-    width: min-content;
+    width: 400px;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
     padding: 0;
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
     font-size: 2rem;
@@ -52,6 +55,12 @@
     background-image: url('../img/pisoton/NOSEMOCIONAEDUCAR.JPG');
     background-size: cover;
     flex-basis: 50% !important;
+}
+
+#info.intern article.emotion-row{
+    width: 1000px;
+    max-width: 90%;
+    flex-direction: column;
 }
 
 #info.intern article.emotion-row .quote1{
@@ -117,6 +126,10 @@
 
 @media (min-width: 768px) { 
 
+    #info.intern article.emotion-row{
+        flex-direction: row;
+    }
+
     #emotionHeader h2, .hearts-reached h2{
         font-size: 4rem;
         line-height: 3.5rem;
@@ -136,13 +149,6 @@
     }
 }
 
-@media (min-width: 992px) { 
-    
-    #info.intern article.emotion-row .desc{
-        text-align: left;
-    }
- }
-
 @media (min-width: 1200px) { 
     .hearts-reached {
         width: 60%;
@@ -151,5 +157,9 @@
     #emotionHeader h2, .hearts-reached h2{
         font-size: 6rem;
         line-height: 5rem;
+    }
+
+    #emotionHeader h2{
+        text-align: left;
     }
  }

@@ -86,3 +86,9 @@ h2{
         padding: 90px;
     }
 }
+
+@media (max-width: 960px){
+    #moreInfo .wrapper .otherPages .page {
+        border-right: none;
+    }
+}

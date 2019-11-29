@@ -528,10 +528,10 @@ $(document).ready(function(){
                 var htmlActivities = '';
                 for (var i = 0; i < obj.datos.length; i++) {
                   htmlActivities += "<div class='activitySliderBox'>\
-                                      <p>"+ obj.datos[i]['title'] +"</p>\
                                       <div class='imgWrapper'>\
                                         <iframe frameborder='0' allowfullscreen style='width:100%;height:100%' src='"+obj.datos[i]['url'].replace("watch?v=", "embed/")+"'></iframe>\
                                       </div>\
+                                      <p class='mt-2 mb-1'>"+ obj.datos[i]['title'] +"</p>\
                                       <div class='desc'>\
                                         "+ obj.datos[i]['description'] +"\
                                       </div>\
@@ -691,7 +691,7 @@ $(document).ready(function(){
   $('#videoTagDiv').on('click', '#activityBanner,.activitySliderBox',function(){
     if(idClick == "activities"){
       $("#videoTagDiv").css({"border":"none"});
-      var title = $(this).children("p:first-child").html();
+      var title = $(this).children("p:b").html();
       var desc = $(this).children(".desc").html();
       var src = $(this).children('.imgWrapper').children("img").attr('src');
       var srcPdf = $(this).children('.downloader').val();
@@ -714,10 +714,11 @@ $(document).ready(function(){
     }else{
       if(idClick == "songs" || idClick == "tv"){
         headTitle = 'Serie';
+        var title = $(this).children("p:nth-child(2)").html();
         if (idClick == "songs"){
           headTitle = 'Canción';
+          var title = $(this).children("p:first-child").html();
         }
-        var title = $(this).children("p:first-child").html();
         var desc = $(this).children(".desc").html();
         $("#activityModal .modal-title").html(headTitle);
         $("#activityModal .modal-body").html("<div id='activitiesWrapperDetails'>\

@@ -52,7 +52,7 @@
   </section>
   <section id="anarita">
     <div class="sectionHeader lastSection">
-      <h3>¿Tienes inquietudes sobre la crianza de tus hijos?</h3>
+      <h3 class="mr-lg-3">¿Tienes inquietudes sobre la crianza de tus hijos?</h3>
       <a href="https://anaritaquehago.questionpro.com" target="_blank" class="btn">Pregúntanos</a>
     </div>
     <div class="visual-information p-3 p-lg-5">
@@ -60,9 +60,9 @@
         <div class="card d-flex justify-content-center align-items-center p-1 mr-lg-5">
             <img src="img/padres/info1.png"/>
             <div class="information d-flex flex-column justify-content-center">
-              <h3>Infografías con amor</h3>
+              <h3>Guías con amor</h3>
               <p>Papá y mamá el proceso de desarrollo de crecimiento de los niños parece fácil pero a veces no es así, Guías con Amor los acompaña para que este gran reto esté cargado de enseñanzas, amor y cuidados</p>
-              <a href="" target="_blank" class="btn-custom-secondary mx-auto mx-lg-0">Ver más...</a>
+              <a href="https://youtu.be/FsT8K-kCRSw" target="_blank" class="btn-custom-secondary mx-auto mx-lg-0">Ver más...</a>
             </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
 
     <div class="information-resources pt-3">
       <div class="articles-links py-2 py-lg-3 px-1 px-md-3">
-          <a class="mb-3 mr-md-5 text-lg-right" href="articles.php"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
+          <a class="mb-3 mr-md-5 text-lg-right" href="https://soundcloud.com/pisot-n" target="_blank"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
           <a class="mb-5 text-lg-left" href="articles.php"><img src="img/padres/elementos-40.png" alt="Razones y corazones"></a>
       </div>
       <div class="images-to-color">
@@ -113,7 +113,7 @@
           <input id="newsFormEmail" type ="text" placeholder="Email"></input>
           <img id="newsFormRegister" src="img/ninos/telegram.png"/>
         </span>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+        <p>Suscríbete para recibir más información</p>
       </div>
       <a href="pisoton.html"><img id="logoPisoton" src="img/ninos/home-07.png" alt="pisoton"/></a>
     </div>

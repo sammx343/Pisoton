@@ -97,7 +97,7 @@
       </div>
       <div>
         <h4>Newsletter</h4>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+        <p>Suscríbete para recibir más información</p>
         <span>
           <input type ="text" placeholder="Email"></input>
           <img src="img/ninos/telegram.jpg"/>
@@ -126,7 +126,7 @@
           <input id="newsFormEmail" type ="text" placeholder="Email"></input>
           <img id="newsFormRegister" src="img/ninos/telegram.png"/>
         </span>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+        <p>Suscríbete para recibir más información</p>
       </div>
       <a href="pisoton.html"><img id="logoPisoton" src="img/ninos/home-07.png" alt="pisoton"/></a>
     </div>

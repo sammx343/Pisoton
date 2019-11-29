@@ -1,3 +1,11 @@
+#anarita .information{
+    background: unset;
+}
+
+.information-resources .articles-links a{
+    margin: auto;
+}
+
 .generalWrapper article{
     width: 90% !important;
 }
@@ -16,6 +24,10 @@
 }
 
 @media (min-width: 768px) { 
+    .information-resources .articles-links a{
+        margin: unset;
+    }
+
     .generalWrapper article{
         width: 50% !important;
     }

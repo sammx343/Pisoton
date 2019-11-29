@@ -34,8 +34,12 @@
 
 #anarita #downloader .pdfBoxes article .boxUpperTitle{
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 800;
+}
+
+#anarita #downloader .pdfBoxes article p{
+    font-size: 1.2rem;
 }
 
 #anarita #downloader .pdfBoxes a:hover{

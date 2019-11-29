@@ -33,14 +33,30 @@
       <a href="index.php" >Las Aventuras de Ugo y Ema</a>
       <a href="javascript:void(0);" class="icon" onclick="menuClickParent()">&#9776;</a>
     </div>
-    <header>
+
+    <navbar class="navbar-pisoton">
+      <a href="#" class="nav-link adventures-link">
+        <p> Las Aventuras de Ugo y Ema</p>
+      </a>
+
+      <a href="#" class="nav-link teachers-link">
+        <p> Maestros, agentes educativos y tutores </p>
+      </a>
+      <a href="#" class="nav-link parents-link">
+        <p> Papá, mamá y cuidadores </p>
+      </a>
+      <a href="#" class="nav-link pisoton-link"> 
+        <p> Pisotón </p>
+      </a>
+    </navbar>
+    <!-- <header>
       <div class="headerWrapper">
-        <a href="index.php" ><img src="img/navbar/elementos-04.png"></a>
-        <a href="padres.php"><img src="img/padres/Padres-05.png"></a>
-        <a href="maestros.html"><img src="img/padres/Padres-02.png"></a>
-        <a href="pisoton.html"><img src="img/padres/Padres-03.png"></a>
+        <a href="index.php" ><img src="img/navbar/home-21.png"></a>
+        <a href="padres.php"><img src="img/navbar/home-22.png"></a>
+        <a href="maestros.html"><img src="img/navbar/home-23.png"></a>
+        <a href="pisoton.html"><img src="img/navbar/home-24.png"></a>
       </div>
-    </header>
+    </header> -->
   </section>
   <section id="main">
     <h1 id="logo">
@@ -102,7 +118,7 @@
           <article class="pl-5 pl-md-0">
             <h2 class="mb-2"> Papá, mamá, cuidadores </h2>
             <p class="mb-3">
-              Si eres  padre y quieres aprender más sobre el adecuado desarrollo de tus hijos y cómo ayudarles a crecer, haz click aquí. <a href="padres.php">Ver mas...</a>
+              Si eres  padre y quieres aprender más sobre el adecuado desarrollo de tus hijos y cómo ayudarles a crecer, haz click aquí. <a href="padres.php">Ver más...</a>
             </p>
           </article>
         </div>
@@ -110,7 +126,7 @@
           <article>
             <h2 class="mb-2"> Maestros, agentes educativos, tutores </h2>
             <p class="mb-3">
-              Para un maestro, seguir aprendiendo es parte de su día a día, entra aquí y conoce más sobre el adecuado desarrollo psicoafectivo de los niños y niñas.  <a href="maestros.html">Ver mas...</a>
+              Para un maestro, seguir aprendiendo es parte de su día a día, entra aquí y conoce más sobre el adecuado desarrollo psicoafectivo de los niños y niñas.  <a href="maestros.html">Ver más...</a>
             </p>
           </article>
           <img class="bgOtherPages" src="img/ninos/home-10.png" alt="maestros">
@@ -141,7 +157,7 @@
           <input id="newsFormEmail" type ="text" placeholder="Email"></input>
           <img id="newsFormRegister" src="img/ninos/telegram.png"/>
         </span>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+        <p>Suscríbete para recibir más información </p>
       </div>
       <a href="pisoton.html"><img id="logoPisoton" src="img/ninos/home-07.png" alt="pisoton"/></a>
     </div>
