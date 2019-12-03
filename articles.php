@@ -16,11 +16,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" >
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
-  <!--<div class="hidden" id="#tabSelect"></div>
-  <section id="banner" class="intern">-->
     <div class="topnav parent whiteBg" id="myTopnav">
       <a href="pisoton.html">Pisotón</a>
       <a href="padres.php">Padres</a>
@@ -28,24 +28,20 @@
       <a href="index.php" >Niños</a>
       <a href="javascript:void(0);" class="icon" onclick="menuClickParent()">&#9776;</a>
     </div>
-    <!--<div class="subMenu">
-      <a id="refBanner" href="#" class="active">Inicio</a>
-      <a id="refVideos" href="#videos">Artículos</a>
-    </div>-->
-    <!--<h1 id="logo">
-      <a href="#"></a>
-    </h1>
-    /*<div class="topnav" id="myTopnav">
-      <a href="#padres">Padres</a>
-      <a href="#maestros">Maestros</a>
-      <a href="#" class="active">Niños</a>
-      <a href="#blog">Video Blog</a>
-      <a href="#Contacto">Contacto</a>
-      <a href="javascript:void(0);" class="icon" onclick="menuClick()">&#9776;</a>
-    </div>-->
-    <header class="relHeader">
-    </header>
-  <!--</section>-->
+    <navbar class="navbar-pisoton">
+      <a href="padres.php" class="nav-link parents-link">
+        <p> Papá, mamá y cuidadores </p>
+      </a>
+      <a href="maestros.html" class="nav-link teachers-link">
+        <p> Maestros, agentes educativos y tutores </p>
+      </a>
+      <a href="pisoton.html" class="nav-link pisoton-link"> 
+        <p> Pisotón </p>
+      </a>
+      <a href="index.php" class="nav-link adventures-link">
+        <p> Las Aventuras de Ugo y Ema</p>
+      </a>
+    </navbar>
   <section id="info" class="intern maxWidth">
 
     <article id="contentArticle" class="bottom" style="overflow:auto">

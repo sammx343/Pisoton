@@ -17,6 +17,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" >
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
@@ -44,8 +46,20 @@
       <a href="#Contacto">Contacto</a>
       <a href="javascript:void(0);" class="icon" onclick="menuClick()">&#9776;</a>
     </div>-->
-    <header class="relHeader">
-    </header>
+    <navbar class="navbar-pisoton">
+      <a href="pisoton.html" class="nav-link pisoton-link"> 
+        <p> Pisotón </p>
+      </a>
+      <a href="index.php" class="nav-link adventures-link">
+        <p> Las Aventuras de Ugo y Ema</p>
+      </a>
+      <a href="padres.php" class="nav-link parents-link">
+        <p> Papá, mamá y cuidadores </p>
+      </a>
+      <a href="maestros.html" class="nav-link teachers-link">
+        <p> Maestros, agentes educativos y tutores </p>
+      </a>
+    </navbar>
   <!--</section>-->
   <section id="info" class="intern maxWidth">
 
@@ -70,47 +84,6 @@
   </section>
 
   <section id="moreInfo" class="maxWidth">
-    <!--<div class="wrapper">
-      <div>
-        <h4><a href="index.html">Niños</a></h4>
-      </div>
-      <div>
-        <h4><a href="padres.php">Padres</a></h4>
-        <ul>
-          <li><a href="padres.php#blog">Video Blog</a></li>
-          <li><a href="padres.php#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="maestros.html">Maestros</a></h4>
-        <ul>
-          <li><a href="maestros.html#blog">Video Blog</a></li>
-          <li><a href="maestros.html#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="pisoton.html">Pisotón</a></h4>
-        <ul>
-          <li><a href="pisoton.html#articles">Artículos</a></li>
-          <li><a href="pisoton.html#cronology">Cronología</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Newsletter</h4>
-        <p>Suscríbete para recibir más información</p>
-        <span>
-          <input type ="text" placeholder="Email"></input>
-          <img src="img/ninos/telegram.jpg"/>
-        </span>
-        <div id="networks">
-          <img src="img/ninos/facebook_icon.png" alt="facebook">
-          <img src="img/ninos/twitter_icon.png" alt="twitter">
-          <img src="img/ninos/feeds_icon.png" alt="feeds">
-          <img src="img/ninos/instagram_icon.png" alt="instagram">
-          <img src="img/ninos/google_icon.png" alt="google">
-        </div>
-      </div>
-    </div>-->
   </section>
   <footer>
     <div class="footerWrapper">

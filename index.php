@@ -33,30 +33,20 @@
       <a href="index.php" >Las Aventuras de Ugo y Ema</a>
       <a href="javascript:void(0);" class="icon" onclick="menuClickParent()">&#9776;</a>
     </div>
-
     <navbar class="navbar-pisoton">
-      <a href="#" class="nav-link adventures-link">
+      <a href="index.php" class="nav-link adventures-link">
         <p> Las Aventuras de Ugo y Ema</p>
       </a>
-
-      <a href="#" class="nav-link teachers-link">
-        <p> Maestros, agentes educativos y tutores </p>
-      </a>
-      <a href="#" class="nav-link parents-link">
+      <a href="padres.php" class="nav-link parents-link">
         <p> Papá, mamá y cuidadores </p>
       </a>
-      <a href="#" class="nav-link pisoton-link"> 
+      <a href="maestros.html" class="nav-link teachers-link">
+        <p> Maestros, agentes educativos y tutores </p>
+      </a>
+      <a href="pisoton.html" class="nav-link pisoton-link"> 
         <p> Pisotón </p>
       </a>
     </navbar>
-    <!-- <header>
-      <div class="headerWrapper">
-        <a href="index.php" ><img src="img/navbar/home-21.png"></a>
-        <a href="padres.php"><img src="img/navbar/home-22.png"></a>
-        <a href="maestros.html"><img src="img/navbar/home-23.png"></a>
-        <a href="pisoton.html"><img src="img/navbar/home-24.png"></a>
-      </div>
-    </header> -->
   </section>
   <section id="main">
     <h1 id="logo">

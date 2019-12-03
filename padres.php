@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/parents.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
@@ -32,14 +33,20 @@
       <a href="index.php" >Las Aventuras de Ugo y Ema</a>
       <a href="javascript:void(0);" class="icon" onclick="menuClickParent()">&#9776;</a>
     </div>
-    <header>
-      <div class="headerWrapper">
-        <a href="#"><img src="img/padres/Padres-01.png"></a>
-        <a href="maestros.html"><img src="img/padres/Padres-02.png"></a>
-        <a href="pisoton.html"><img src="img/padres/Padres-03.png"></a>
-        <a href="index.php" ><img src="img/padres/Padres-04.png"></a>
-      </div>
-    </header>
+    <navbar class="navbar-pisoton">
+      <a href="padres.php" class="nav-link parents-link">
+        <p> Papá, mamá y cuidadores </p>
+      </a>
+      <a href="maestros.html" class="nav-link teachers-link">
+        <p> Maestros, agentes educativos y tutores </p>
+      </a>
+      <a href="pisoton.html" class="nav-link pisoton-link"> 
+        <p> Pisotón </p>
+      </a>
+      <a href="index.php" class="nav-link adventures-link">
+        <p> Las Aventuras de Ugo y Ema</p>
+      </a>
+    </navbar>
     <div class="bannerImg"></div>
     <div class="generalWrapper parents-hero">
       <article>
