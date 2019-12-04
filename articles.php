@@ -44,7 +44,6 @@
       </a>
     </navbar>
   <section id="info" class="intern maxWidth mt-md-5 pt-md-5">
-
     <article id="contentArticle" class="bottom" style="overflow:auto">
       <p class="title"></p>
       <div id='blogImageSliderWrapper' >
