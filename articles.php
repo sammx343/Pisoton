@@ -15,6 +15,7 @@
     <title></title>
     <meta name="viewport" content="width=device-width, user-scalable=no" >
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -42,7 +43,7 @@
         <p> Las Aventuras de Ugo y Ema</p>
       </a>
     </navbar>
-  <section id="info" class="intern maxWidth">
+  <section id="info" class="intern maxWidth mt-md-5 pt-md-5">
 
     <article id="contentArticle" class="bottom" style="overflow:auto">
       <p class="title"></p>

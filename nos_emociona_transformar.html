@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/excited_to_transform.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
@@ -32,22 +33,20 @@
       <a href="index.php" >Niños</a>
       <a href="javascript:void(0);" class="icon" onclick="menuClickParent()">&#9776;</a>
     </div>
-    <header class="relHeader">
-      <div class="headerWrapper pisotonB">
-        <a href="pisoton.html"><img src="img/pisoton/PisotonHome-01.png"></a>
-        <div class="subHeader">
-          <div class="subHeaderItem">
-            <a href="padres.php"><img src="img/padres/Padres-05.png"></a>
-            <a href="maestros.html"><img src="img/padres/Padres-02.png"></a>
-            <a href="index.php" ><img src="img/padres/Padres-04.png"></a>
-          </div>
-          <div class="subHeaderItem">
-            <a href="#"><img src="img/pisoton/NosEmociona-09.png"></a>
-            <a href="razones_y_corazones.html"><img src="img/pisoton/NosEmociona-10.png"></a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <navbar class="navbar-pisoton">
+      <a href="pisoton.html" class="nav-link pisoton-link"> 
+        <p> Pisotón </p>
+      </a>
+      <a href="index.php" class="nav-link adventures-link">
+        <p> Las Aventuras de Ugo y Ema</p>
+      </a>
+      <a href="padres.php" class="nav-link parents-link">
+        <p> Papá, mamá y cuidadores </p>
+      </a>
+      <a href="maestros.html" class="nav-link teachers-link">
+        <p> Maestros, agentes educativos y tutores </p>
+      </a>
+    </navbar>
   <section id="info" class="intern">
     <div id='emotionHeader'>
       <div class="title">
