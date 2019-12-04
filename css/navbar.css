@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
     width: 20%;
     height: 70px;
     text-align: center;
@@ -36,14 +37,14 @@
     transition: .5s all;
 }
 
-.navbar-pisoton .nav-link:hover {
+.navbar-pisoton > .nav-link:hover {
     height: 90px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: black 5px 5px 5px;
 }
 
-.navbar-pisoton .nav-link:first-child{
+.navbar-pisoton > .nav-link:first-child{
     width: 40%; 
     padding: 50px 30px 50px 30px;
     border-bottom-right-radius: 50px;
@@ -66,7 +67,7 @@
     width: 25%;
 }
 
-.navbar-pisoton .nav-link.teachers-link:first-child{
+.navbar-pisoton > .nav-link.teachers-link:first-child{
     width: 45%; 
     font-size: 2.5rem;
 }
@@ -76,20 +77,69 @@
     font-size: 1.7rem;
 }
 
-.navbar-pisoton .nav-link:first-child:hover {
+.navbar-pisoton > .nav-link:first-child:hover {
     height: 130px;
 }
 
-.navbar-pisoton .nav-link:nth-child(2){
+.navbar-pisoton > .nav-link:nth-child(2){
     margin-left: -5px;
 }
 
-.navbar-pisoton .nav-link.teachers-link:first-child{
+.navbar-pisoton > .nav-link.teachers-link:first-child{
     padding: 50px 10px 50px 10px;
 }
 
-.navbar-pisoton .nav-link.pisoton-link:first-child{
+.navbar-pisoton > .nav-link.pisoton-link:first-child{
     font-size: 3.5rem;
+}
+
+.nav-sub-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.nav-child-sub-header:first-child{
+    display: flex;
+    width: 100%;
+}
+
+.nav-child-sub-header:last-child{
+    display: flex;
+    width: 50%;
+    margin-top: 3px;
+    position: relative;
+    left: -20px;
+}
+
+.nav-child-sub-header a.nav-link{
+    position: relative;
+    top: 0;
+    transition: .5s all;
+}
+
+.nav-child-sub-header a.nav-link:hover{
+    top: -5px;
+    box-shadow: #000 5px 5px 5px;
+}
+
+.special-reasons > .nav-link{
+    min-width: 210px;
+    background: #f2f2f2;
+    color: #666666;
+    font-size: 1.2rem;
+}
+
+.special-reasons > .nav-link:first-child{
+    background: gainsboro;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.special-reasons > .nav-link:last-child{
+    background: gainsboro;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 @media (min-width: 768px){
@@ -97,7 +147,6 @@
         margin-top: 150px;
     }
 }
-
 
 /* This is to cover the stupid mess of legacy code that the idiot before me left behind */
 @media (max-width: 768px){
