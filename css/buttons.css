@@ -1,5 +1,6 @@
 .btn-pisoton{
     width: fit-content;
+    width: -moz-fit-content;
     position: relative;
     top: 0;
     padding: 10px 30px;
