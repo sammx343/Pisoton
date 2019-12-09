@@ -18,19 +18,22 @@ var timelineSwiper = new Swiper('.timeline .swiper-container', {
 });
 
 $('.swiper-button-next').on('click', event =>{
+    scrollToYear();
+});
+
+$('.swiper-button-prev').on('click', event =>{
+    scrollToYear();
+});
+
+function scrollToYear(){
     let currentSelectedYear = $('.swiper-pagination-bullet-active')[0];
     let swapperPaginator = $('.swiper-pagination')[0];
-
-    // swapperPaginator.animate({ scrollTop: -100}, 600);
-    console.log( ($(currentSelectedYear).offset().top) );
-    console.log($(currentSelectedYear)[0].offsetTop + $(swapperPaginator)[0].scrollTop);
-
 
     let parentDiv = $(swapperPaginator);
     let innerListItem = $(currentSelectedYear);
 
     parentDiv.animate({
-        scrollTop: parentDiv.scrollTop() + (innerListItem.position().top - parentDiv.position().top) - (parentDiv.height()/2) + (innerListItem.height()/2)},
-        800
+        scrollTop: parentDiv.scrollTop() + (innerListItem.position().top - parentDiv.position().top) - (parentDiv.height()/4) + (innerListItem.height()/4)},
+        500
     );
-});
+}
