@@ -240,10 +240,6 @@
 
 
 @media (min-width: 576px) { 
-    .bannerImg{
-        top: 20px;
-    }
-
     .information-resources .articles-links a{
         max-width: 70%;
     }
