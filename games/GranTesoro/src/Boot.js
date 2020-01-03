@@ -3,10 +3,10 @@ Candy.Boot = function(game){};
 Candy.Boot.prototype = {
     preload: function () {
         //Carga la imagen de fondo
-        this.load.image("background", "img/BG_res.jpg");
+        this.load.image("background", "img/BG_res.JPG");
 
         //Carga la barra de progreso
-        this.load.image('preloaderBar', 'img/INTERFACE_BARRA_DE_MADERA_new.png');  //nueva imagen
+        this.load.image('preloaderBar', 'img/INTERFACE_BARRA_DE_MADERA_new.PNG');  //nueva imagen
 
 	},
     create: function ()

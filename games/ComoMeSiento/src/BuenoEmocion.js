@@ -25,6 +25,8 @@ Candy.BuenoEmocion.prototype = {
             animationImages.push(this.imageName);
         }
 
+       
+
         var emocionBueno = this.game.add.sprite(600, 410, animationImages[0]);
         var sound = this.game.sound.play('audioEmocionBueno');
 
@@ -33,10 +35,12 @@ Candy.BuenoEmocion.prototype = {
             framesCounter = parseInt(animationFrames * this.advance);
             if (framesCounter < animationFrames) {
                 emocionBueno.loadTexture(animationImages[framesCounter]);
+               
             }
             else {
                 context.animationFinish = true;
                 window.clearInterval(interval);
+                
             }
         }, 3);
 
@@ -44,26 +48,46 @@ Candy.BuenoEmocion.prototype = {
         var fondoMenuIntro = this.game.add.sprite(0, 845, 'fondoMenuIntro');
         fondoMenuIntro.scale.setTo(1, 0.22);
         //Button Next
-        
-        this.add.button(1670, 870, 'buttonNext', function () {
+
+     
+
+        //EVENTO DEL BOTON
+        this.add.button(1670, 870, 'buttonNext', function ()
+        {
             if (!context.animationFinish){
-                alert("Debe esperar a que termine la animación!!");
+                swal("No puedes saltar el video", "debes esperar a que termine el video", "error")
                 return;
             }
             var listVideos = ["video1ViewVideo", "video2ViewVideo", "video3ViewVideo", "video4ViewVideo"];
+            debugger;
             var posicionVideo = listVideos.indexOf(this.videoCurrentPlay);
              if (posicionVideo != -1) {
                 posicionVideo++;
             }
-            if (posicionVideo >= 4){
+            if (posicionVideo >= 4) {
+               
                 this.game.state.states['SelectVideo'].videoActivePlay = listVideos[0];
             } else{
                 this.game.state.states['SelectVideo'].videoActivePlay = listVideos[posicionVideo];
-            }
-            this.game.state.start('SelectVideo');
+            } if (CORAZON == 4) {
+
+                this.game.sound.play('EFin');
+                CORAZON = 0;
+                EstadoVideo1 = 'ACTIVO';
+                EstadoVideo2 = 'ACTIVO';
+                EstadoVideo3 = 'ACTIVO';
+                EstadoVideo4 = 'ACTIVO';
+
+                //swal("Muy bien, lo lograste", "has completado todos los corazones", "success");
+
+                CORAZON = 0;
+                this.game.state.start('CoverPage');
+            } else {
+                this.game.state.start('SelectVideo');
+              }
         }, this, 1, 0, 2);
 
-        //Add Heart
+        //ADICIONA EL CORAZON
         var animationImagesHeart = [];
         this.rootName = 'corazonFinal-';
         this.fileNumberMask = '0000';
@@ -73,23 +97,30 @@ Candy.BuenoEmocion.prototype = {
             this.fileNumber += i.toString();
             this.imageName = this.rootName + this.fileNumber;
             animationImagesHeart.push(this.imageName);
+           
         }
         var posicionX = 0;
         var posicionY = -300;
-        switch (this.videoCurrentPlay) {
-            case "video1ViewVideo":
+
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        switch (CORAZON) {
+            case 1:
+                console.log("PASO 6 - UN CORAZON");
                 posicionX = -300;
                 break;
-            case "video2ViewVideo":
+            case 2:
+                console.log("PASO 7 - DOS CORAZONES");
                 this.game.add.sprite(-300, -300, 'corazonFinal-0039');
                 posicionX = -75;
                 break;
-            case "video3ViewVideo":
+            case 3:
+                console.log("PASO 8 - TRES CORAZONES");
                 this.game.add.sprite(-300, -300, 'corazonFinal-0039');
                 this.game.add.sprite(-75, -300, 'corazonFinal-0039');
                 posicionX = 150;
                 break;
-            case "video4ViewVideo":
+            case 4:
+                console.log("PASO 9 - CUATRO CORAZONES");
                 this.game.add.sprite(-300, -300, 'corazonFinal-0039');
                 this.game.add.sprite(-75, -300, 'corazonFinal-0039');
                 this.game.add.sprite(150, -300, 'corazonFinal-0039');
@@ -98,18 +129,45 @@ Candy.BuenoEmocion.prototype = {
         }
 
 
+
+        //switch (this.videoCurrentPlay) {
+        //    case "video1ViewVideo":
+        //        posicionX = -300;
+        //        break;
+        //    case "video2ViewVideo":
+        //        this.game.add.sprite(-300, -300, 'corazonFinal-0039');
+        //        posicionX = -75;
+        //        break;
+        //    case "video3ViewVideo":
+        //        this.game.add.sprite(-300, -300, 'corazonFinal-0039');
+        //        this.game.add.sprite(-75, -300, 'corazonFinal-0039');
+        //        posicionX = 150;
+        //        break;
+        //    case "video4ViewVideo":
+        //        this.game.add.sprite(-300, -300, 'corazonFinal-0039');
+        //        this.game.add.sprite(-75, -300, 'corazonFinal-0039');
+        //        this.game.add.sprite(150, -300, 'corazonFinal-0039');
+        //        posicionX = 375;
+        //        break;
+        //}
+
+
         var emocionBuenoHeart = this.game.add.sprite(posicionX, posicionY, animationImagesHeart[0]);
         var framesCounter = 1;
         var interval = setInterval(function () {
             if (framesCounter <= 39) {
+             
                 emocionBuenoHeart.loadTexture(animationImagesHeart[framesCounter]);
             }
             else {
+                
                 window.clearInterval(interval);
             }
             framesCounter++;
         }, 800);
 
+
+       
        // this.game.add.sprite(-300, -300, 'corazonExitoBrillante');
        // this.game.add.sprite(-75, -300, 'corazonExitoBrillante');
        // this.game.add.sprite(150, -300, 'corazonExitoBrillante');

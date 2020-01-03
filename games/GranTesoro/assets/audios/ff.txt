@@ -1,0 +1,11 @@
+ El volumen de la unidad E es DISCOE
+ El n£mero de serie del volumen es: 181F-AEEC
+
+ Directorio de E:\pisoton\GranTesoro\assets\audios
+
+26/11/2019  05:57           177,900 1Estaeslasalademicasa.mp3
+26/11/2019  05:57           164,076 2Escuchastelaspistaanterior.mp3
+26/11/2019  05:57            81,516 3Yaescuchaste2pistassige.mp3
+26/11/2019  05:57           289,260 4Muybienlograsteencontrartodas.mp3
+               4 archivos        712,752 bytes
+               0 dirs  18,244,145,152 bytes libres

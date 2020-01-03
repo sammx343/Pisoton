@@ -238,7 +238,6 @@
     max-width: 100%;
 }
 
-
 @media (min-width: 576px) { 
     .information-resources .articles-links a{
         max-width: 70%;

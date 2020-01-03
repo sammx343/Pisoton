@@ -2,7 +2,7 @@ Candy.Intro = function(game) {
 };
 Candy.Intro.prototype = {
     create: function() {
-
+        
 		var PausaAudio = false;
         var liScale = 0.4;
 
@@ -44,6 +44,10 @@ Candy.Intro.prototype = {
                 //this.game.sound.stop('introDialog');
                 if (!estadoAnimacion){
                     sound.pause();
+
+                    // var music1 = this.sound.add('eUno');
+                    // music1.play();
+
                     this.game.state.start("SceneOne");
                 } else {
                     PausaAudio = true;

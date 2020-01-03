@@ -4,9 +4,14 @@ var recompensa1;
 var recompensa2;
 var recompensa3;
 
+var Pista11 = false;
+var Pista22 = false;
+var Pista33 = false;
+
+
 Candy.SceneTwo.prototype = {
     create: function() {
-
+        Pista11 = false; Pista22 = false; Pista33 = false;
         var mensajeError = "Intentalo de nuevo.";
         var mensajeExito = "Has encontrado una pieza oculta, Felicitaciones.";
 
@@ -33,29 +38,39 @@ Candy.SceneTwo.prototype = {
         //lPez.scale.setTo(2, 2);
         var walk = lPez.animations.add('AnimaPez');
         lPez.inputEnabled = true;  //Permite que el sprite sea clickeable        
+
+        lPez.input.pixelPerfectClick = true;
+        lPez.input.useHandCursor = true; 
+
         lPez.events.onInputDown.add(listenerPez, this);
 
         function listenerPez() {
             this.game.sound.play('Esc2Pez');  //Sonido
-            lPez.animations.play('AnimaPez', 15, false);
+            lPez.animations.play('AnimaPez', 17, false);
         }
 
 
-        //Animar Puerta
-        var lPuerta = this.game.add.sprite(1570 * liScale, 280 * liScale, 'Puerta');
-        lPuerta.scale.setTo(liScale, liScale);
-        var walk = lPuerta.animations.add('AnimaPuerta');
-        lPuerta.inputEnabled = true;  //Permite que el sprite sea clickeable        
-        lPuerta.events.onInputDown.add(listenerPuerta, this);
+        // //Animar Puerta
+        // var lPuerta = this.game.add.sprite(690 * liScale, 300 * liScale, 'Puerta');       
+        // liScaleP = 0.7;
+        // lPuerta.scale.setTo(liScaleP, liScaleP);
+        // var walk = lPuerta.animations.add('AnimaPuerta');
+        // lPuerta.inputEnabled = true;  //Permite que el sprite sea clickeable               
+        // lPuerta.input.pixelPerfectClick = true;
+        // lPuerta.input.useHandCursor = true;         
+        // lPuerta.events.onInputDown.add(listenerPuerta, this);
 
         
-
+        
 
         //Animar Barril
         var lBarril = this.game.add.sprite(1520 * liScale, 570 * liScale, 'Barril');
         lBarril.scale.setTo(liScale, liScale);
         var walk = lBarril.animations.add('AnimaBarril');
-        lBarril.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lBarril.inputEnabled = true;  //Permite que el sprite sea clickeable    
+        lBarril.input.pixelPerfectClick = true;
+        lBarril.input.useHandCursor = true; 
+
         lBarril.events.onInputDown.add(listenerBarril, this);
 
         function listenerBarril() {
@@ -79,8 +94,21 @@ Candy.SceneTwo.prototype = {
         var lFlor = this.game.add.sprite(1330 * liScale, 695 * liScale, 'Flor');
         lFlor.scale.setTo(liScale, liScale);
         var walk = lFlor.animations.add('AnimaFlor');
-        lFlor.inputEnabled = true;  //Permite que el sprite sea clickeable        
+
+        lFlor.inputEnabled = true;  //Permite que el sprite sea clickeable            
+        lFlor.input.pixelPerfectClick = true;
+        lFlor.input.useHandCursor = true; 
         lFlor.events.onInputDown.add(listenerFlor, this);
+
+        lFlor2.inputEnabled = true;  //Permite que el sprite sea clickeable            
+        lFlor2.input.pixelPerfectClick = true;
+        lFlor2.input.useHandCursor = true; 
+        lFlor2.events.onInputDown.add(listenerFlor, this);
+
+        lFlor1.inputEnabled = true;  //Permite que el sprite sea clickeable            
+        lFlor1.input.pixelPerfectClick = true;
+        lFlor1.input.useHandCursor = true; 
+        lFlor1.events.onInputDown.add(listenerFlor, this);
 
         function listenerFlor() {
             this.game.sound.play('Esc2Flores');  //Sonido
@@ -95,7 +123,9 @@ Candy.SceneTwo.prototype = {
         var lMaceta1 = this.game.add.sprite(245 * liScale, 210 * liScale, 'Maceta1');
         lMaceta1.scale.setTo(liScale, liScale);
         var walk = lMaceta1.animations.add('AnimaMaceta1');
-        lMaceta1.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lMaceta1.inputEnabled = true;  //Permite que el sprite sea clickeable    
+        lMaceta1.input.pixelPerfectClick = true;
+        lMaceta1.input.useHandCursor = true;     
         lMaceta1.events.onInputDown.add(listenerMaceta1, this);
 
         function listenerMaceta1() {
@@ -109,6 +139,8 @@ Candy.SceneTwo.prototype = {
         lMaceta2.scale.setTo(liScale, liScale);
         var walk = lMaceta2.animations.add('AnimaMaceta2');
         lMaceta2.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lMaceta2.input.pixelPerfectClick = true;
+        lMaceta2.input.useHandCursor = true;           
         lMaceta2.events.onInputDown.add(listenerMaceta2, this);
 
         function listenerMaceta2() {
@@ -138,35 +170,51 @@ Candy.SceneTwo.prototype = {
 
         //lZanahoria.scale.setTo(2, 2);
         var walk = lZanahoria.animations.add('AnimaZanahoria');
-        lZanahoria.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria.inputEnabled = true;  //Permite que el sprite sea clickeable      
+        lZanahoria.input.pixelPerfectClick = true;
+        lZanahoria.input.useHandCursor = true;            
         lZanahoria.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria2.animations.add('AnimaZanahoria2');
-        lZanahoria2.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria2.inputEnabled = true;  //Permite que el sprite sea clickeable    
+        lZanahoria2.input.pixelPerfectClick = true;
+        lZanahoria2.input.useHandCursor = true;              
         lZanahoria2.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria3.animations.add('AnimaZanahoria3');
-        lZanahoria3.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria3.inputEnabled = true;  //Permite que el sprite sea clickeable    
+        lZanahoria3.input.pixelPerfectClick = true;
+        lZanahoria3.input.useHandCursor = true;              
         lZanahoria3.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria4.animations.add('AnimaZanahoria4');
-        lZanahoria4.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria4.inputEnabled = true;  //Permite que el sprite sea clickeable  
+        lZanahoria4.input.pixelPerfectClick = true;
+        lZanahoria4.input.useHandCursor = true;                
         lZanahoria4.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria5.animations.add('AnimaZanahoria5');
-        lZanahoria5.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria5.inputEnabled = true;  //Permite que el sprite sea clickeable   
+        lZanahoria5.input.pixelPerfectClick = true;
+        lZanahoria5.input.useHandCursor = true;               
         lZanahoria5.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria6.animations.add('AnimaZanahoria6');
-        lZanahoria6.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria6.inputEnabled = true;  //Permite que el sprite sea clickeable   
+        lZanahoria6.input.pixelPerfectClick = true;
+        lZanahoria6.input.useHandCursor = true;               
         lZanahoria6.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria7.animations.add('AnimaZanahoria7');
-        lZanahoria7.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria7.inputEnabled = true;  //Permite que el sprite sea clickeable   
+        lZanahoria7.input.pixelPerfectClick = true;
+        lZanahoria7.input.useHandCursor = true;               
         lZanahoria7.events.onInputDown.add(listenerZanahoria, this);
 
         var walk = lZanahoria8.animations.add('AnimaZanahoria8');
-        lZanahoria8.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lZanahoria8.inputEnabled = true;  //Permite que el sprite sea clickeable    
+        lZanahoria8.input.pixelPerfectClick = true;
+        lZanahoria8.input.useHandCursor = true;              
         lZanahoria8.events.onInputDown.add(listenerZanahoria, this);
 
         function listenerZanahoria() {
@@ -187,6 +235,19 @@ Candy.SceneTwo.prototype = {
         var Tiera12 = this.game.add.sprite(900 * liScale, 710 * liScale, 'TierraZana');
         Tiera12.scale.setTo(liScale, liScale);
         
+
+
+//Animar Gusano
+var lGusano = this.game.add.sprite(460 * liScale, 387 * liScale, 'Gusano');
+lGusano.scale.setTo(liScale, liScale);
+var walk = lGusano.animations.add('AnimaGusano');
+lGusano.inputEnabled = true;  //Permite que el sprite sea clickeable       
+lGusano.input.pixelPerfectClick = true;
+lGusano.input.useHandCursor = true;          
+lGusano.events.onInputDown.add(listenerGusano, this);
+
+
+
         //Animar Pastel
         var lPastel = this.game.add.sprite(680 * liScale, 40 * liScale, 'Pastel');  //5
         lPastel.scale.setTo(liScale, liScale);
@@ -197,18 +258,34 @@ Candy.SceneTwo.prototype = {
         var lVentana2 = this.game.add.sprite(720 * liScale, 25 * liScale, 'Ventana2'); //25
         //lVentana2.scale.setTo(liScale, liScale);
         var walk = lVentana2.animations.add('AnimaVentana2');
-        lVentana2.inputEnabled = true;  //Permite que el sprite sea clickeable        
+        lVentana2.inputEnabled = true;  //Permite que el sprite sea clickeable       
+        lVentana2.input.pixelPerfectClick = true;
+        lVentana2.input.useHandCursor = true;           
         lVentana2.events.onInputDown.add(listenerVentana2, this);
 
         
 
+        //Animar Puerta
+        var lPuerta = this.game.add.sprite(690 * liScale, 300 * liScale, 'Puerta');       
+        liScaleP = 0.7;
+        lPuerta.scale.setTo(liScaleP, liScaleP);
+        var walk = lPuerta.animations.add('AnimaPuerta');
+        lPuerta.inputEnabled = true;  //Permite que el sprite sea clickeable               
+        lPuerta.input.pixelPerfectClick = true;
+        lPuerta.input.useHandCursor = true;         
+        lPuerta.events.onInputDown.add(listenerPuerta, this);
 
-        //Animar Gusano
-        var lGusano = this.game.add.sprite(460 * liScale, 387 * liScale, 'Gusano');
-        lGusano.scale.setTo(liScale, liScale);
-        var walk = lGusano.animations.add('AnimaGusano');
-        lGusano.inputEnabled = true;  //Permite que el sprite sea clickeable        
-        lGusano.events.onInputDown.add(listenerGusano, this);
+
+
+
+        // //Animar Gusano
+        // var lGusano = this.game.add.sprite(460 * liScale, 387 * liScale, 'Gusano');
+        // lGusano.scale.setTo(liScale, liScale);
+        // var walk = lGusano.animations.add('AnimaGusano');
+        // lGusano.inputEnabled = true;  //Permite que el sprite sea clickeable       
+        // lGusano.input.pixelPerfectClick = true;
+        // lGusano.input.useHandCursor = true;          
+        // lGusano.events.onInputDown.add(listenerGusano, this);
 
         sceneToLoad = "SceneThree";
         currentScene = "SceneTwo";
@@ -217,7 +294,17 @@ Candy.SceneTwo.prototype = {
         recompensa1.scale.setTo(EscalaRecompensas);
 
 
+
+        var soundDos = this.game.sound.play('eDos');
+
         function listenerGusano() {
+            if (Pista33 == true)
+            {
+                return;
+            }
+
+            Pista33 = true;
+
             this.game.sound.play('Esc2Gusanito');  //Sonido
             
             lGusano.animations.play('AnimaGusano', 15, false);
@@ -230,7 +317,9 @@ Candy.SceneTwo.prototype = {
                 this.add.button(1670 * liScale, 880 * liScale, 'BotonPortada', function () {           
                     if (recompensa1.frame == 1 && recompensa2.frame == 1 && recompensa3.frame == 1) {
                         music.stop();
-                        this.game.state.start('Felicitacion2')
+                        Pista11 = false; Pista22 = false; Pista33 = false;
+                        this.game.state.start('Felicitacion2');
+                        
                     } else {
                         alert("Aun no has completado todas las piezas.");
                     }
@@ -240,6 +329,13 @@ Candy.SceneTwo.prototype = {
         }
 
         function listenerVentana2() {
+            if (Pista11 == true)
+            {
+                return;
+            }
+
+            Pista11 = true;
+
             if (recompensa2.frame != 1) {
                 //alert(mensajeExito);
             }
@@ -254,7 +350,9 @@ Candy.SceneTwo.prototype = {
                 this.add.button(1670 * liScale, 880 * liScale, 'BotonPortada', function () {           
                     if (recompensa1.frame == 1 && recompensa2.frame == 1 && recompensa3.frame == 1) {
                         music.stop();
-                        this.game.state.start('Felicitacion2')
+                        Pista11 = false; Pista22 = false; Pista33 = false;
+                        this.game.state.start('Felicitacion2');
+                        
                     } else {
                         alert("Aun no has completado todas las piezas.");
                     }
@@ -264,6 +362,13 @@ Candy.SceneTwo.prototype = {
         }
 
         function listenerPuerta() {
+            if (Pista22 == true)
+            {
+                return;
+            }
+
+            Pista22 = true;
+
             this.game.sound.play('Esc2Cerca');  //Sonido
             lPuerta.animations.play('AnimaPuerta', 7, false);
             recompensa3.frame = 1;
@@ -274,7 +379,9 @@ Candy.SceneTwo.prototype = {
                 this.add.button(1670 * liScale, 880 * liScale, 'BotonPortada', function () {           
                     if (recompensa1.frame == 1 && recompensa2.frame == 1 && recompensa3.frame == 1) {
                         music.stop();
-                        this.game.state.start('Felicitacion2')
+                        Pista11 = false; Pista22 = false; Pista33 = false;
+                        this.game.state.start('Felicitacion2');
+                        
                     } else {
                         alert("Aun no has completado todas las piezas.");
                     }

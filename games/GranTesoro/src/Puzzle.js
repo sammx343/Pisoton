@@ -25,6 +25,10 @@ Candy.Puzzle = function(game) {
 //this.add.button(1270, 910, 'button-continue', function () { this.game.state.start('End') }, this, 1, 0, 2);
 Candy.Puzzle.prototype = {
     create: function () {
+
+        
+        this.game.sound.play('EFin');
+
         var liScale = 0.4;
         this.piecesleft = 15;
 

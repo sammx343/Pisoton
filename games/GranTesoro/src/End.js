@@ -2,7 +2,7 @@ Candy.End = function(game) {
 };
 Candy.End.prototype = {
     create: function() {
-
+        //revisado 30062019
         console.log("Escena Final");
         //Adiciona el fondo
         this.game.add.sprite(0, 0, 'introBG');

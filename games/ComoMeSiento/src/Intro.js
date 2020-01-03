@@ -4,7 +4,7 @@ Candy.Intro = function (game) {
 var animationImages = [];
 var introHugoYEma;
 var fondoMenuIntro;
-
+var VideoElegido = 0;
 
 Candy.Intro.prototype = {
     create: function () {
@@ -68,9 +68,11 @@ Candy.Intro.prototype = {
         // }, this, 1, 0, 2);
         //Button Next
         this.add.button(1670, 870, 'buttonNext', function () {
-            sound.pause();
+             sound.pause();
+            
             this.game.state.states['SelectVideo'].videoActivePlay = "video1ViewVideo";
             this.game.state.start('SelectVideo');
+        
         }, this, 1, 0, 2);
     },
     update: function () {

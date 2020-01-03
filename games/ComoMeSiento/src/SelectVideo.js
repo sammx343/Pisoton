@@ -1,5 +1,8 @@
 Candy.SelectVideo = function (game) {
 };
+
+
+
 Candy.SelectVideo.prototype = {
     create: function () {
         console.log("Load SelectVideo");
@@ -16,44 +19,61 @@ Candy.SelectVideo.prototype = {
         var marcoNaranja = this.game.add.sprite(965, 10, 'marcoNaranjaSelectVideo');
         var marcoVerde = this.game.add.sprite(40, 563, 'marcoVerdeSelectVideo');
         var marcoMorado = this.game.add.sprite(969, 545, 'marcoMoradoSelectVideo');
-
+        
 		debugger;
         this.numVideo = (this.videoActivePlay).substr(5, 1);
-		//this.numVideo = '1';
+        
         botonRosado = this.add.button(678, 333, 'botonRosadoSelectVideo', function () {
-            if (1 == context.numVideo) {
+            debugger;
+           
+            if (EstadoVideo1 == 'ACTIVO') {
+                VideoElegido = 1;
                 music.stop();
                 this.game.state.states['ViewVideo'].videoCurrentPlay = "video1ViewVideo";
                 this.game.state.start("ViewVideo");
-            } else if (1 < context.numVideo) {
-                alert("Este video ya lo has visitado!!");
+                EstadoVideo1 = 'VISTO';
+
+
+                //swal("Good job!", "You clicked the button!", "success");
+
+                
+            } else if (EstadoVideo1 == 'VISTO') {
+
+                swal("Ya lo viste", "Selecciona otro video", "error" )
             }            
         }, this, 1, 0, 2);
 		botonRosado.scale.setTo(1.2, 1.2);
-		
+        
         botonNaranja = this.add.button(1640, 290, 'botonNaranjaSelectVideo', function () {
-            if (2 == context.numVideo) {
+
+            if (EstadoVideo2 == 'ACTIVO') {
+                VideoElegido = 2;
                 music.stop();
                 this.game.state.states['ViewVideo'].videoCurrentPlay = "video2ViewVideo";
                 this.game.state.start("ViewVideo");
-            } else if (2 < context.numVideo) {
-                alert("Este video ya lo has visitado!!");
-            } else {
-                alert("Aun no puedes visitar este video!!");
+                EstadoVideo2 = 'VISTO';
+                
+            } else if (EstadoVideo2 == 'VISTO') {
+                swal("Ya lo viste", "Selecciona otro video", "error")
             } 
         }, this, 1, 0, 2);
 		botonNaranja.scale.setTo(1.2, 1.2);
 		
 		
         botonVerde = this.add.button(670, 856, 'botonVerdeSelectVideo', function () {
-            if (3 == context.numVideo) {
+           
+
+
+
+            if (EstadoVideo3 == 'ACTIVO') {
+                VideoElegido = 3;
                 music.stop();
                 this.game.state.states['ViewVideo'].videoCurrentPlay = "video3ViewVideo";
                 this.game.state.start("ViewVideo");
-            }else if (3 < context.numVideo) {
-                alert("Este video ya lo has visitado!!");
-            } else {
-                alert("Aun no puedes visitar este video!!");
+                EstadoVideo3 = 'VISTO';
+                
+            } else if (EstadoVideo3 == 'VISTO') {
+                swal("Ya lo viste", "Selecciona otro video", "error")
             } 
         }, this, 1, 0, 2);
 		
@@ -63,14 +83,17 @@ Candy.SelectVideo.prototype = {
 	
 		
         botonMorado = this.add.button(1645, 842, 'botonMoradoSelectVideo', function () {
-            if (4 == context.numVideo) {
+
+         //context.numVideo
+            if (EstadoVideo4 == 'ACTIVO') {
+                VideoElegido = 4;
                 music.stop();
                 this.game.state.states['ViewVideo'].videoCurrentPlay = "video4ViewVideo";
                 this.game.state.start("ViewVideo");
-            }else if (4 < context.numVideo) {
-                alert("Este video ya lo has visitado!!");
-            } else {
-                alert("Aun no puedes visitar este video!!");
+                EstadoVideo4 = 'VISTO';
+                
+            } else if (EstadoVideo4 == 'VISTO') {
+                swal("Ya lo viste", "Selecciona otro video", "error")
             } 
         }, this, 1, 0, 2);
 		botonMorado.scale.setTo(1.2, 1.2);

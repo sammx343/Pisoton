@@ -17,31 +17,31 @@ Candy.Preloader.prototype = {
 
 
         //Carga la barra de progreso
-        this.load.image('BarraMadera1', 'img/INTERFACE_BARRA_DE_MADERA_res.png'); 
+        this.load.image('BarraMadera1', 'img/INTERFACE_BARRA_DE_MADERA_res.PNG'); 
 
         //Imagenes de las escenas
-        this.load.image('main', 'assets/FondoEscenas/fEscena1.png');  //1.png
-        this.load.image('intro', 'assets/FondoEscenas/2.png');
-        this.load.image('loading', 'assets/FondoEscenas/3.png');
-        this.load.image('sceneOne', 'assets/FondoEscenas/4.png');
-        this.load.image('reward', 'assets/FondoEscenas/5.png');
-        this.load.image('sceneTwo', 'assets/FondoEscenas/6.png');
-        this.load.image('sceneThree', 'assets/FondoEscenas/7.png');
-        this.load.image('puzzle', 'assets/FondoEscenas/8.png');
-        this.load.image('end', 'assets/FondoEscenas/9.png');
+        this.load.image('main', 'assets/FondoEscenas/fEscena1.PNG');  //1.png
+        // this.load.image('intro', 'assets/FondoEscenas/2.png');
+        // this.load.image('loading', 'assets/FondoEscenas/3.png');
+        // this.load.image('sceneOne', 'assets/FondoEscenas/4.png');
+        // this.load.image('reward', 'assets/FondoEscenas/5.png');
+        // this.load.image('sceneTwo', 'assets/FondoEscenas/6.png');
+        // this.load.image('sceneThree', 'assets/FondoEscenas/7.png');
+        // this.load.image('puzzle', 'assets/FondoEscenas/8.png');
+        // this.load.image('end', 'assets/FondoEscenas/9.png');
 
         //Precarga Iconos
-        this.load.spritesheet('BotonSiguiente', 'assets/Escena3/EmmaCome.png', 474, 566, 73);
+        //this.load.spritesheet('BotonSiguiente', 'assets/Escena3/EmmaCome.png', 474, 566, 73);
 
         //Intro
-        this.game.load.image('HugoEmma', 'assets/intro1/HugoEmma.png');
-        this.game.load.image('Arbustos', 'assets/intro1/Arbustos.png');
-        this.game.load.image('hoja', 'assets/intro1/hoja.png');
-        this.game.load.image('banderines', 'assets/intro1/banderines.png');        
-		this.load.spritesheet('BotonPortada', 'assets/intro1/BOTON_SIGUIENTE_res.png', 190 * liScale, 190 * liScale);  //////////
+        this.game.load.image('HugoEmma', 'assets/intro1/HugoEmma.PNG');
+        this.game.load.image('Arbustos', 'assets/intro1/Arbustos.PNG');
+        this.game.load.image('hoja', 'assets/intro1/hoja.PNG');
+        this.game.load.image('banderines', 'assets/intro1/banderines.PNG');        
+		this.load.spritesheet('BotonPortada', 'assets/intro1/BOTON_SIGUIENTE_res.PNG', 190 * liScale, 190 * liScale);  //////////
 
         //Precarga objetos escena1
-        this.load.image('Escenario1', 'assets/Escena1/ESC_1_BG_00000.png');
+        this.load.image('Escenario1', 'assets/Escena1/ESC_1_BG_00000.PNG');
         this.load.spritesheet('button-audio', 'img/button-audio.png', 111, 96);
 
         this.load.spritesheet('recompensa1', 'assets/Escena1/recompensa1.png', 246, 192, 2);
@@ -57,31 +57,42 @@ Candy.Preloader.prototype = {
         //1212x538
 
         //Precarga objetos escena2
-        this.load.image('Escenario2', 'assets/Escena2/ESC_2_BG_00000.png');
-        this.load.spritesheet('Barril', 'assets/Escena2/Barril.png', 174, 215, 28);
-        this.load.spritesheet('Pez', 'assets/Escena2/AnimaPez.png', 165, 222, 91);
-        this.load.spritesheet('Puerta', 'assets/Escena2/Puerta.png', 358, 394, 11);
-        this.load.spritesheet('Flor', 'assets/Escena2/Flor.png', 187, 304, 31);
-        this.load.spritesheet('Maceta1', 'assets/Escena2/Maceta1.png', 206, 368, 19);
-        this.load.spritesheet('Maceta2', 'assets/Escena2/Maceta2.png', 203, 372, 19);
+        this.load.image('Escenario2', 'assets/Escena2/ESC_2_BG_00000.PNG');
+        this.load.spritesheet('Barril', 'assets/Escena2/Barril.PNG', 174, 215, 28);
+        this.load.spritesheet('Pez', 'assets/Escena2/AnimaPez.PNG', 165, 222, 91);
+        //this.load.spritesheet('Puerta', 'assets/Escena2/-Puerta.png', 358, 394, 11);
+        //this.load.spritesheet('Puerta', 'assets/Escena2/Puerta.png', 700, 288, 59);
+
+        this.load.spritesheet('Puerta', 'assets/Escena2/Puerta.PNG', 700, 288, 59);
+
+        this.load.spritesheet('Flor', 'assets/Escena2/Flor.PNG', 187, 304, 31);
+        this.load.spritesheet('Maceta1', 'assets/Escena2/Maceta1.PNG', 206, 368, 19);
+        this.load.spritesheet('Maceta2', 'assets/Escena2/Maceta2.PNG', 203, 372, 19);
         //this.load.spritesheet('Pastel', 'assets/Escena2/Pastel.png', 522, 525, 31);
-        this.load.spritesheet('Pastel', 'assets/Escena2/Pastel.png', 658, 799, 64); //nuevo
+        this.load.spritesheet('Pastel', 'assets/Escena2/Pastel.PNG', 658, 799, 64); //nuevo
         
-        this.load.spritesheet('Zanahoria', 'assets/Escena2/Zanahoria.png', 122, 161, 21);
-        this.load.spritesheet('Gusano', 'assets/Escena2/AnimaGusano.png', 576, 517, 62);  //nuevo       
-        this.load.spritesheet('Ventana2', 'assets/Escena2/Ventana2.png', 305, 154, 31);
-        this.load.image('TierraZana', 'assets/Escena2/TierraZana.png');
+        this.load.spritesheet('Zanahoria', 'assets/Escena2/Zanahoria.PNG', 122, 161, 21);
+        this.load.spritesheet('Gusano', 'assets/Escena2/AnimaGusano.PNG', 576, 517, 62);  //nuevo       
+        this.load.spritesheet('Ventana2', 'assets/Escena2/Ventana2.PNG', 305, 154, 31);
+        this.load.image('TierraZana', 'assets/Escena2/TierraZana.PNG');
         
         //Precarga objetos escena3
-        this.load.image('Escenario3', 'assets/Escena3/Escena3.png');
-        this.load.spritesheet('Jarra', 'assets/Escena3/AnimaJarra.png', 277, 275, 5);
-        this.load.spritesheet('Emma', 'assets/Escena3/EmmaCome.png', 474, 566, 73);
-        this.load.spritesheet('Ugo', 'assets/Escena3/UgoBebe.png', 241, 214.5555555555556, 73);
-        this.load.image('platoMesa', 'assets/Escena3/platoMesa.png');
-        this.load.image('salerosMesa', 'assets/Escena3/salerosMesa.png');
+        this.load.image('Escenario3', 'assets/Escena3/Escena3.PNG');
+        //this.load.spritesheet('Jarra', 'assets/Escena3/AnimaJarra2.png', 277, 275, 5);
+        this.load.spritesheet('Jarra', 'assets/Escena3/AnimaJarra2.PNG', 400, 443, 73);
+
+        this.load.spritesheet('Emma', 'assets/Escena3/EmmaCome2.PNG', 400, 376, 73);
+//        this.load.spritesheet('Emma', 'assets/Escena3/EmmaCome2.png', 474, 566, 73);
+        
+        //this.load.spritesheet('Ugo', 'assets/Escena3/UgoBebe.png', 241, 214.5555555555556, 73);
+        this.load.spritesheet('Ugo', 'assets/Escena3/UgoBebe2.PNG', 400, 213, 73);
+
+
+        this.load.image('platoMesa', 'assets/Escena3/platoMesa.PNG');
+        this.load.image('salerosMesa', 'assets/Escena3/salerosMesa.PNG');
 
         //Boton continuar
-        this.load.spritesheet('button-continue', 'assets/iconos/BOTON_SIGUIENTE_res.png', 358, 133);
+        this.load.spritesheet('button-continue', 'assets/iconos/BOTON_SIGUIENTE_res.PNG', 358, 133);
 
         this.load.text('font-ttf', 'fonts/comicbook.ttf');
         this.load.text('font-svg', 'fonts/comicbook.svg');
@@ -89,14 +100,14 @@ Candy.Preloader.prototype = {
         this.load.text('font-woff', 'fonts/comicbook.woff');
 
         // Assets de Rompecabezas
-        this.load.image('bg_dark', 'assets/images/bg_dark.png');
-        this.load.image('interiorTitle', 'assets/images/interior_title.png');
-        this.load.image('base', 'assets/images/base.png');
-        this.load.image('basecolor', 'assets/images/basecolor.png');
-        this.load.image('welldone', 'assets/images/welldone.png');
-        this.load.spritesheet('jigsawWin_anim', 'assets/images/jigsawWin_anim.png', 292, 292);
-        this.load.image('gameNum', 'assets/images/game_num.png');
-        this.load.image('title', 'assets/images/title.png');
+        // this.load.image('bg_dark', 'assets/images/bg_dark.png');
+        // this.load.image('interiorTitle', 'assets/images/interior_title.png');
+        // this.load.image('base', 'assets/images/base.png');
+        // this.load.image('basecolor', 'assets/images/basecolor.png');
+        // this.load.image('welldone', 'assets/images/welldone.png');
+        // this.load.spritesheet('jigsawWin_anim', 'assets/images/jigsawWin_anim.png', 292, 292);
+        // this.load.image('gameNum', 'assets/images/game_num.png');
+        // this.load.image('title', 'assets/images/title.png');
 
         //Precarga Imagenes rompecabezas
         for (var i = 1; i <= 15; i++) {
@@ -145,7 +156,7 @@ Candy.Preloader.prototype = {
         /* Carga Imagenes Recompensa 1 */
         this.rootName = 'final-';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
         for (var i = 1; i <= 239; i++) {
             this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
@@ -160,7 +171,7 @@ Candy.Preloader.prototype = {
          /* Carga Imagenes Recompensa 2 */
         this.rootName = 'juego2_fraseugo2';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
         for (var i = 1; i <= 231; i++) {
             this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
@@ -175,7 +186,7 @@ Candy.Preloader.prototype = {
          /* Carga Imagenes Recompensa 3 */
         this.rootName = 'final-';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
         for (var i = 1; i <= 218; i++) {
             this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
@@ -190,7 +201,7 @@ Candy.Preloader.prototype = {
         /* Escena final */
         this.rootName = 'Juego2_IntentoBueno';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
         for (var i = 1; i <= 234; i++) {
             this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
@@ -205,7 +216,7 @@ Candy.Preloader.prototype = {
         // Loading Images
         this.rootName = 'Juego_2_intro';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
         //debugger;
         for (var i = 1; i <= 520; i++) {
@@ -216,16 +227,26 @@ Candy.Preloader.prototype = {
         }
 
         // Loading background
-        this.load.image('introBG', 'assets/Intro/BG_INTRO.png');
+        this.load.image('introBG', 'assets/Intro/BG_INTRO.PNG');
 
         // Loading Audio
         this.load.audio('introDialog', 'assets/Intro/Intro.ogg');
 
+        //Nuevos audios
+        this.load.audio('eUno', 'assets/audios/1Estaeslasalademicasa.ogg');
+        this.load.audio('eDos', 'assets/audios/2Escuchastelaspistaanterior.ogg');
+        this.load.audio('eTres', 'assets/audios/3Yaescuchaste2pistassige.ogg');
+        this.load.audio('EFin', 'assets/audios/4Muybienlograsteencontrartodas.ogg');
+
 
 	},
 	create: function() {
+        this.game.state.start('Main');
+
         //this.preloadBar.cropEnabled = false;
-        //this.game.state.start('Main');
-        this.game.state.start('Puzzle');
+        //this.game.state.start('Puzzle');        
+        //this.game.state.start('SceneThree');
+        //this.game.state.start('SceneTwo');
+        //this.game.state.start('SceneOne');
 	}
 };

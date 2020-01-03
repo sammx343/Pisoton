@@ -5,6 +5,7 @@ Candy.Main.prototype = {
     create: function () {
 
         console.log('inicia Main en Como Me Siento Yo');
+        console.log('prueba 2');
         var liScale = 0.4;
 
         //Adiciona el fondo

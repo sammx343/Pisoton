@@ -4,6 +4,13 @@ Candy.Preloader = function (game) {
     this.ready = false;
     this.interval = null;
 };
+
+var CORAZON = 0;
+var EstadoVideo1 = 'ACTIVO';
+var EstadoVideo2 = 'ACTIVO';
+var EstadoVideo3 = 'ACTIVO';
+var EstadoVideo4 = 'ACTIVO';
+
 Candy.Preloader.prototype = {
     preload: function () {
         console.log("Load Preloader");
@@ -86,7 +93,7 @@ Candy.Preloader.prototype = {
     
         this.rootName = 'INTRO_JUEGO01';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
        for (var i = 1; i <= 741; i++) {
            this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
@@ -183,7 +190,7 @@ Candy.Preloader.prototype = {
         //Agregar el contenido de la vista de emocionFallido
         this.rootNameEmocionFallido = 'final-';
         this.fileNumberMask = '0000';
-        this.fileExtension = '.png';
+        this.fileExtension = '.PNG';
 
        for (var i = 1; i <= 98; i++) {
            this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
@@ -210,7 +217,7 @@ Candy.Preloader.prototype = {
         }
         
         this.rootNameEmocionBueno = 'Juego_1_intento_bueno_';
-
+        this.fileExtension = '.PNG';
         for (var i = 1; i <= 255; i++) {
             this.fileNumber = this.fileNumberMask.substring(0, this.fileNumberMask.length - i.toString().length);
             this.fileNumber += i.toString();
@@ -219,14 +226,26 @@ Candy.Preloader.prototype = {
         }
         this.load.audio('audioEmocionBueno', 'assets/buenoEmocion/audioEmocionBueno.ogg');
        
+        this.load.audio('eIni', 'assets/audios/0Queteparecesiantesdejugar.mp3');
+        this.load.audio('EFin', 'assets/audios/6FINALUGOReconocistetodaslasemociones.mp3');
+        
         
     },
     create: function () {
         window.clearInterval(this.interval);
 
         console.log('En preloader create Main en Como Me Siento Yo');
-        //alert('CoverPage');
-        this.game.state.start('CoverPage');
+        this.game.state.start('CoverPage');  //********************************
+
+
+
+       //this.game.state.states['SelectVideo'].videoActivePlay = "video1ViewVideo";
+       // this.game.state.start('SelectVideo');
+
+
+
+
+
 
         //this.game.state.start('Main');
         //alert(2);
