@@ -691,7 +691,7 @@ $(document).ready(function(){
   $('#videoTagDiv').on('click', '#activityBanner,.activitySliderBox',function(){
     if(idClick == "activities"){
       $("#videoTagDiv").css({"border":"none"});
-      var title = $(this).children("p:b").html();
+      var title = $(this).children("p").html();
       var desc = $(this).children(".desc").html();
       var src = $(this).children('.imgWrapper').children("img").attr('src');
       var srcPdf = $(this).children('.downloader').val();

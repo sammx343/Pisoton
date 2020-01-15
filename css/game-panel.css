@@ -3,6 +3,10 @@
    border-bottom: none; 
 }
 
+#main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox .desc {
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
 #main #videoTagDiv #activitiesWrapper #activitySliderWrapper #activitySlider .activitySliderBox p{
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;    
     height: 40px;
