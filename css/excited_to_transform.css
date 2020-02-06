@@ -114,10 +114,6 @@
   }
 
 @media (min-width: 525px) { 
-    #emotionHeader{
-        margin-top: 50px;
-    }
-
     #emotionHeader h2, .hearts-reached h2{
         font-size: 3rem;
         line-height: 2.5rem;
@@ -128,6 +124,10 @@
 
     #info.intern article.emotion-row{
         flex-direction: row;
+    }
+
+    #emotionHeader{
+        margin-top: 50px;
     }
 
     #emotionHeader h2, .hearts-reached h2{

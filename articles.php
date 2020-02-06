@@ -245,8 +245,9 @@
           {
               //alert(mensaje);
               var obj = JSON.parse(mensaje);
-              if(obj.exito == "1")
+              if(obj.exito == "1" && obj.datos.length)
               {
+                console.log(obj.datos[0]);
                 $(".bottom .title").html(obj.datos[0]['title']);
                 $(".bottom .desc").html(obj.datos[0]['description']);
                 $(".bottom .author").html('Por: ' + obj.datos[0]['author']);

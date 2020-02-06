@@ -1062,7 +1062,7 @@ header .headerWrapper.pisotonB::before {
 }
 
 .articles.card {
-  color: #000;
+  color: #fff;
   margin-left: 7%;
   margin-right: 2%;
   margin-top: 60px;
@@ -1074,6 +1074,7 @@ header .headerWrapper.pisotonB::before {
   width: 270px;
   flex-grow: 0;
   overflow: hidden;
+  background: #68D5E1;
 }
 .articles.card .cardTitle {
   margin: 16px 0 29px 51px;
@@ -1107,6 +1108,10 @@ header .headerWrapper.pisotonB::before {
 }
 .articles.card .cardDesc p {
   line-height: normal !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .articles.card .cardDesc p span {
   line-height: normal !important;
@@ -1138,13 +1143,29 @@ header .headerWrapper.pisotonB::before {
   background: rgba(0, 0, 0, 0.6);
 }
 .articles.card a {
-  color: #7DC754;
+  color: black;
   margin: 20px 0 20px 20px;
   display: inline-block;
   z-index: 2;
+  font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+  width: 100px;
+  background: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  position: relative;
+  top: 0;
+  box-shadow: black 2px 2px 5px;
+  transition: .25s all;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
 }
 .articles.card a:visited, .articles.card a:hover, .articles.card a:focus {
   text-decoration-line: none;
+}
+
+.articles.card a:hover{
+  top: -5px;
+  box-shadow: #000 5px 5px 5px;
 }
 
 .card {
@@ -1153,9 +1174,7 @@ header .headerWrapper.pisotonB::before {
   display: inline-block;
   position: relative;
   vertical-align: top;
-  -webkit-box-shadow: -2px 2px 10px 1px #31b2cd;
-  -moz-box-shadow: -2px 2px 10px 1px #31b2cd;
-  box-shadow: -2px 2px 10px 1px #31b2cd;
+  box-shadow: 2px 2px 5px 0 #000;
 }
 .card .cardTitle {
   margin: 29px 0 24px 68px;

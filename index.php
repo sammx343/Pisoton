@@ -95,7 +95,7 @@
       </nav>
       <div id="wrapperVideo">
         <div id="videoTagDiv">
-          <iframe id="videoHome" frameborder='0' allowfullscreen style='width:100%;' src='https://www.youtube.com/embed/Z2uKbfWNJAw?autoplay=0&showinfo=0&controls=1&rel=0'></iframe>\
+          <iframe id="videoHome" frameborder='0' allowfullscreen style='width:100%;' src='https://www.youtube.com/watch?v=0yOZyn6LRJw&feature=youtu.be'></iframe>\
         </div>
       </div>
     </article>
