@@ -1,0 +1,50 @@
+#dataEmotion{
+    margin-top: 0;
+    width: 90%;
+}
+
+#dataEmotion #dataEmotionHeader .circleLink{
+    position: relative;
+    background-size: cover;
+    top: 0;
+    transition: .5s all;
+    padding: 50% 20px 20px 20px;
+    margin: 0;
+}
+
+#dataEmotion #dataEmotionHeader .circleLink.active {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: .2rem solid #85CCDB;
+}
+
+#dataEmotion #dataEmotionHeader .circleLink.active:after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: .2rem;
+    background: #85CCDB;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: .7s all;
+}
+
+#dataEmotion #dataEmotionHeader a:hover .circleLink.active:after {
+    top: 114%;
+}
+
+#dataEmotion #dataEmotionHeader .circleLink:hover{
+    animation: shake 1s;
+    top: -10px;
+}
+
+@media(min-width: 769px){
+    #dataEmotion #dataEmotionHeader .circleLink.active {
+        border-bottom: .3rem solid #85CCDB;
+    }
+
+    #dataEmotion #dataEmotionHeader .circleLink.active:after{
+        height: .3rem;
+    }
+}

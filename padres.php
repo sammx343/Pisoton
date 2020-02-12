@@ -68,7 +68,7 @@
             <img src="img/padres/info1.png"/>
             <div class="information d-flex flex-column justify-content-center">
               <h3>Guías con amor</h3>
-              <p>Papá y mamá el proceso de desarrollo de crecimiento de los niños parece fácil pero a veces no es así, Guías con Amor los acompaña para que este gran reto esté cargado de enseñanzas, amor y cuidados</p>
+              <p>Papá y mamá, el desarrollo de los niños y niñas parece fácil, pero no lo es; Guías con Amor los acompaña para que este gran reto esté cargado de enseñanzas, amor y cuidados.</p>
               <a href="https://youtu.be/FsT8K-kCRSw" target="_blank" class="btn-custom-secondary mx-auto mx-lg-0">Ver más...</a>
             </div>
         </div>

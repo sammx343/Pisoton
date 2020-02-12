@@ -24,10 +24,6 @@
 }
 
 @media (min-width: 768px) { 
-    .information-resources .articles-links a{
-        margin: unset;
-    }
-
     .generalWrapper article{
         width: 50% !important;
     }
@@ -38,3 +34,11 @@
         bottom: 20%;
     }
 }
+
+@media (min-width: 992px) { 
+    .information-resources .articles-links a{
+        margin: unset;
+    }
+}
+
+

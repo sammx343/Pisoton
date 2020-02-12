@@ -1142,7 +1142,7 @@ header .headerWrapper.pisotonB::before {
   left: 0;
   background: rgba(0, 0, 0, 0.6);
 }
-.articles.card a {
+.articles.card > a {
   color: black;
   margin: 20px 0 20px 20px;
   display: inline-block;
@@ -1163,7 +1163,7 @@ header .headerWrapper.pisotonB::before {
   text-decoration-line: none;
 }
 
-.articles.card a:hover{
+.articles.card > a:hover{
   top: -5px;
   box-shadow: #000 5px 5px 5px;
 }
@@ -2337,7 +2337,9 @@ header .headerWrapper.pisotonB::before {
   line-height: 53px;
   padding: 28px 0;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
+
 #videos.intern > article {
   border-bottom: 4px solid #E5E5E5;
   color: #43474A;

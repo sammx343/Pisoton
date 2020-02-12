@@ -1,0 +1,21 @@
+
+#dataEmotion{
+    margin-top: 20vh;
+}
+
+#info.intern article .descBig{
+    color: #88CCDB;
+    flex-basis: 50%;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+@media(min-width: 768px){
+    #dataEmotion{
+        margin-top: 25vh;
+    }
+}
+
+

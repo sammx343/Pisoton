@@ -95,7 +95,7 @@
       </nav>
       <div id="wrapperVideo">
         <div id="videoTagDiv">
-          <iframe id="videoHome" frameborder='0' allowfullscreen style='width:100%;' src='https://www.youtube.com/watch?v=0yOZyn6LRJw&feature=youtu.be'></iframe>\
+          <iframe id="videoHome" frameborder='0' allowfullscreen style='width:100%;' src='https://www.youtube.com/embed/0yOZyn6LRJw'></iframe>\
         </div>
       </div>
     </article>
@@ -108,7 +108,7 @@
           <article class="pl-5 pl-md-0">
             <h2 class="mb-2"> Papá, mamá, cuidadores </h2>
             <p class="mb-3">
-              Si eres  padre y quieres aprender más sobre el adecuado desarrollo de tus hijos y cómo ayudarles a crecer, haz click aquí. <a href="padres.php">Ver más...</a>
+              Si quieres aprender más sobre el adecuado desarrollo de tus hijos y cómo ayudarles a crecer, haz click aquí. <a href="padres.php">Ver más...</a>
             </p>
           </article>
         </div>
@@ -116,7 +116,7 @@
           <article>
             <h2 class="mb-2"> Maestros, agentes educativos, tutores </h2>
             <p class="mb-3">
-              Para un maestro, seguir aprendiendo es parte de su día a día, entra aquí y conoce más sobre el adecuado desarrollo psicoafectivo de los niños y niñas.  <a href="maestros.html">Ver más...</a>
+              Seguir aprendiendo es parte de su día a día, entra aquí y conoce más sobre el adecuado desarrollo psicoafectivo de los niños y niñas.  <a href="maestros.html">Ver más...</a>
             </p>
           </article>
           <img class="bgOtherPages" src="img/ninos/home-10.png" alt="maestros">
@@ -127,7 +127,7 @@
       <img class="m-0 my-5 pr-lg-5 mr-md-5" src="img/ninos/pisoton-logo-white.png" alt="pisoton" width="250">
       <div class="pisoton-text text-center text-md-left">
         <p class="m-0 mb-4 mx-auto">
-          Por más de dos décadas trabajamos incansablemente con, por y para a infancia. Entérate por qué y como lo hacemos ...
+          Por más de dos décadas trabajamos incansablemente con, por y para la infancia. Entérate por qué y cómo lo hacemos ...
         </p>
         <a href="pisoton.html">haciendo click aquí</a>
       </div>
