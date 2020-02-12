@@ -1,0 +1,36 @@
+.articles.card{
+    position: relative;
+    top: 0;
+    transition: .25s all;
+}
+
+.articles.card:hover{
+    top: -10px;
+    box-shadow: 5px 5px 5px 0 #000;
+}
+
+.articles.card .cardTitle{
+    height: 10%;
+}
+
+.articles.card .cardDescTitle{
+    height: 30%;
+    font-weight: 500;
+}
+
+.articles.card .cardDesc{
+    height: 70%;
+}
+
+.articles.card .cardDesc p, .articles.card .cardDesc p.Normal1{
+    color: white;
+}
+
+.articles.card > .article-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

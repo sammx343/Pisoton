@@ -1143,21 +1143,7 @@ header .headerWrapper.pisotonB::before {
   background: rgba(0, 0, 0, 0.6);
 }
 .articles.card > a {
-  color: black;
-  margin: 20px 0 20px 20px;
-  display: inline-block;
   z-index: 2;
-  font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
-  width: 100px;
-  background: white;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 5px;
-  position: relative;
-  top: 0;
-  box-shadow: black 2px 2px 5px;
-  transition: .25s all;
-    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
 }
 .articles.card a:visited, .articles.card a:hover, .articles.card a:focus {
   text-decoration-line: none;
@@ -2514,11 +2500,12 @@ header .headerWrapper.pisotonB::before {
 #info.intern article.bottom .title {
   color: #85CCDB;
   flex-basis: auto;
-  font-size: 44px;
+  font-size: 55px;
   font-weight: 600;
   line-height: 52px;
   padding: 20px 0px;
   text-align: center;
+  font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
 }
 #info.intern article.bottom#contentArticle {
   width: 800px;

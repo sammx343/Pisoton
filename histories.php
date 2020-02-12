@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/histories.css">
+    <link rel="stylesheet" href="css/components/article-card.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
@@ -193,17 +193,18 @@
                     classCSS = 'withImg';
                   }
                   category = '';
-                  htmlArticles += '<div class="blogSliderBox"> \
-                                    <article class="card articles '+classCSS+'"> \
-                                      <p class="cardTitle">Historias</p> \
-                                      <p class="cardSubtitle">'+ category +'</p> \
-                                      <p class="cardDescTitle"> '+ obj.datos[i]['title'] +'</p> \
-                                      <div class="cardDesc">'+ obj.datos[i]['description'] +'</div> \
-                                      <a href="histories.php?f=2&history='+obj.datos[i]['idHistorias']+'">Ver más</a> \
-                                      '+ htmlImg +' \
-                                    </article> \
-                                  </div>';
+                  htmlArticles += `<div class="blogSliderBox">
+                                    <article class="card articles ${classCSS}">
+                                      <p class="cardTitle">Historias</p>
+                                      <p class="cardSubtitle">${category}</p>
+                                      <p class="cardDescTitle"> ${obj.datos[i]['title']} </p>
+                                      <div class="cardDesc">${obj.datos[i]['description']}</div>
+                                      ${htmlImg}
+                                      <a class="article-link" href="histories.php?f=2&history=${obj.datos[i]['idHistorias']}"></a> \
+                                    </article>
+                                  </div>`;
                 }
+                
                 $("#blogSlider").html(htmlArticles).parent().siblings('#loadMoreVideos').css({'right':'calc(50% - ' + $('#blogSliderWrapper').width()/2 + 'px)'});
                 fixHeight();
               }

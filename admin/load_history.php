@@ -15,10 +15,10 @@
   $usuario = $_SESSION['user'];
   if(isset($_POST['filter'])){
     if($_POST['filter'] == 'all'){
-      $query = "SELECT * FROM Pis_historias";
+      $query = "SELECT * FROM Pis_historias ORDER BY date DESC";
     }else{
       $historyId = $_POST['filter'];
-      $query = "SELECT * FROM Pis_historias WHERE idHistorias = $historyId";
+      $query = "SELECT * FROM Pis_historias WHERE idHistorias = $historyId ORDER BY date DESC";
     }
   }else{
     $query = "SELECT * FROM Pis_historias";
