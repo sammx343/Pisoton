@@ -44,7 +44,7 @@
         <p> Pisotón </p>
       </a>
       <a href="index.php" class="nav-link adventures-link">
-        <p> Las Aventuras de Ugo y Ema</p>
+        <p> Las Aventuras de Ugo y Ema</p>|
       </a>
     </navbar>
     <div class="bannerImg"></div>
@@ -85,7 +85,7 @@
 
     <div class="information-resources pt-3">
       <div class="articles-links py-2 py-lg-3 px-1 px-md-3">
-          <a class="mb-3 mr-md-5 text-lg-right" href="https://soundcloud.com/pisot-n" target="_blank"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
+          <a class="mb-3 mr-md-5 text-lg-right" href="https://soundcloud.com/pisot-n/sets/guias-con-amor" target="_blank"><img src="img/padres/elementos-39.png" alt="Nos emociona educar"></a>
           <a class="mb-5 text-lg-left" href="articles.php"><img src="img/padres/elementos-40.png" alt="Razones y corazones"></a>
       </div>
       <div class="images-to-color">

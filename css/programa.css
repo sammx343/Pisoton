@@ -12,6 +12,13 @@
     box-shadow: black 5px 5px 5px;
 }
 
+#emotionHeader .imageDesc {
+    background-image: url(../img/pisoton/FOTO_INFERIOR_INV_3.JPG);
+    background-size: cover;
+    background-position: center;
+    flex-basis: 50% !important;
+}
+
 @media (max-width: 960px){
     #info.intern .textAndImageTitle {
         text-align: center;

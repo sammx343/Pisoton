@@ -20,6 +20,13 @@
     flex-basis: 50% !important;
 }
 
+#info.intern article .desc{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    color: #85CCDB;
+    font-size: 36px;
+    line-height: 40px;
+}
+
 @media (max-width: 576px) {
     .blogSliderWrapper #blogSlider_{
         flex-direction: column;
