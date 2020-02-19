@@ -16,9 +16,15 @@
     <title></title>
     <meta name="viewport" content="width=device-width, user-scalable=no" >
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/components/data-emotion.css">
+    <link rel="stylesheet" href="css/excited_to_transform.css">
+    <link rel="stylesheet" href="css/investigacion.css">
+    <link rel="stylesheet" href="css/components/article-card.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
@@ -45,32 +51,27 @@
         <p> Maestros, agentes educativos y tutores </p>
       </a>
     </navbar>
+
+  
+  <section id="dataEmotion">
+    <div id="dataEmotionHeader" class="my-4">
+      <a href="estructura.html"><div class="circleLink" id="structure"></div></a>
+      <a href="programa.html"><div class="circleLink" id="program"></div></a>
+      <a href="formacion.html"><div class="circleLink" id="formation"></div></a>
+      <a href="investigacion.html"><div class="circleLink active" id="investigation"></div></a>
+    </div>
+  </section>  
   <section id="videos" class="intern">
     <article class="internTopMsg">
       Pisotón, una investigación que se transforma en acción.
     </article>
-    <!--<div id='blogSliderWrapper'>
-      <div id='blogSlider'>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Fotos lo que somos 1</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-        <div class='blogSliderBox'><img src='img/ninos/back_games.png'/><p class='desc'>Lorem Ipsum - Lorem Ipsum</p></div>
-      </div>
-    </div>
-    <a href='#' class='btn' id='loadMoreVideos'>Ver más</a>-->
   </section>
-  <section id="info" class="intern maxWidth">
+  <section id="info" class="intern ">
     <div id='emotionHeader'>
       <div class="title">
-        <img src='img/pisoton/NosEmociona-01.png'/>
+        <h2> Nos Emociona Transformar</h2>
       </div>
       <div class="imageDesc">
-        <img src='img/pisoton/FOTO_SUPERIOR.JPG'/>
       </div>
     </div>
     <!--<article class="width800">
@@ -107,54 +108,11 @@
   </section>
   <section id="videos" class="intern">
     <h4 class="sectionDivider">Artículos de investigación</h4>
-    <div id='blogSliderWrapper' class="maxWidth" style='max-width: 1200px !important;margin-left: 0 !important;position: relative;left: 50%;transform: translate(-50%,0);'>
+    <div id='blogSliderWrapper' class="m-auto">
       <div id='blogSlider'>
       </div>
     </div>
     <a href='#' class='btn' id='loadMoreVideos'>Ver más</a>
-  </section>
-  <section id="moreInfo">
-    <!--<div class="wrapper" class="maxWidth">
-      <div>
-        <h4><a href="index.html">Niños</a></h4>
-      </div>
-      <div>
-        <h4><a href="padres.php">Padres</a></h4>
-        <ul>
-          <li><a href="padres.php#blog">Video Blog</a></li>
-          <li><a href="padres.php#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="maestros.html">Maestros</a></h4>
-        <ul>
-          <li><a href="maestros.html#blog">Video Blog</a></li>
-          <li><a href="maestros.html#articles">Artículos</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4><a href="pisoton.html">Pisotón</a></h4>
-        <ul>
-          <li><a href="pisoton.html#articles">Artículos</a></li>
-          <li><a href="pisoton.html#cronology">Cronología</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Newsletter</h4>
-        <p>Suscríbete para recibir más información</p>
-        <span>
-          <input type ="text" placeholder="Email"></input>
-          <img src="img/ninos/telegram.jpg"/>
-        </span>
-        <div id="networks">
-          <img src="img/ninos/facebook_icon.png" alt="facebook">
-          <img src="img/ninos/twitter_icon.png" alt="twitter">
-          <img src="img/ninos/feeds_icon.png" alt="feeds">
-          <img src="img/ninos/instagram_icon.png" alt="instagram">
-          <img src="img/ninos/google_icon.png" alt="google">
-        </div>
-      </div>
-    </div>-->
   </section>
   <footer>
     <div class="footerWrapper">
@@ -205,6 +163,8 @@
           if(obj.exito == "1")
           {
             var htmlArticles = '';
+            var classCSS = '';
+            var htmlImg = '';
             for (var i = 0; i < obj.datos.length; i++) {
               if(obj.datos[i]['urlImage'] != null){
                 htmlImg = '<img class="backImg" src="admin/uploads/' + obj.datos[i]['urlImage'] + '">';
@@ -212,12 +172,12 @@
               }
               category = '';
               htmlArticles += '<div class="blogSliderBox"> \
-                                <article class="card articles '+classCSS+'"> \
+                                <article class="card articles m-auto '+classCSS+'"> \
                                   <p class="cardTitle">Artículo</p> \
                                   <p class="cardSubtitle">'+ category +'</p> \
                                   <p class="cardDescTitle"> '+ obj.datos[i]['title'] +'</p> \
                                   <div class="cardDesc">'+ obj.datos[i]['description'] +'</div> \
-                                  <a href="articles.php?f=2&article='+obj.datos[i]['idContent']+'">Ver más</a> \
+                                  <a class="article-link" href="articles.php?f=2&article='+obj.datos[i]['idContent']+'">Ver más</a> \
                                   '+ htmlImg +' \
                                 </article> \
                               </div>';

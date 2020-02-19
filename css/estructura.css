@@ -1,6 +1,12 @@
 
-#dataEmotion{
-    margin-top: 20vh;
+
+#emotionHeader .imageDesc {
+    background-image: url(../img/pisoton/organigrama.png);
+    background-color: #347EA1;
+    background-size: contain;
+    flex-basis: 50% !important;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #info.intern article .descBig{
@@ -12,9 +18,63 @@
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
 }
 
+#info.intern #techniques tbody{
+    border-left: 1px solid #ddd;
+}
+
+#info.intern #techniques th{
+    background: #68d5e1;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+#info.intern #techniques th:first-child{
+    border-radius: 10px 0 0 0;
+}
+
+#info.intern #techniques th:last-child{
+    border-radius: 0 10px 0 0;
+}
+
+#info.intern #techniques td{
+    background: #347ea1;
+    color: #fff;
+}
+
+#info.intern #techniques tr:nth-child(even) td{
+    background: #4b9ec5;
+}
+
+#info.intern #techniques td:first-child{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+table#techniques{
+    border-radius: 10px;
+    box-shadow: black 5px 5px 5px;
+}
+
 @media(min-width: 768px){
     #dataEmotion{
         margin-top: 25vh;
+    }
+}
+
+@media(max-width: 425px){
+    #emotionHeader .imageDesc{
+        background-size: cover;
+    }
+}
+
+@media(max-width: 1024px){
+    #emotionHeader{
+        flex-direction: column;
+    }
+
+    #emotionHeader > div {
+        height: 50vh;
+        min-height: 300px;
     }
 }
 

@@ -127,4 +127,9 @@
     #emotionHeader h2{
         text-align: left;
     }
+
+    #info.intern article.emotion-row .quote1{
+        font-size: 4rem;
+        line-height: 3rem;
+    }
  }

@@ -1,0 +1,29 @@
+#blogSliderWrapper, .blogSliderWrapper{
+    left: 0%;
+    transform: none !important;
+    width: 100%;
+}
+
+.blogSliderWrapper #blogSlider_ .blogSliderBox img{
+    border-radius: 10px;
+    box-shadow: black 5px 5px 5px;
+}
+
+#videos.intern > article.internTopMsg{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#emotionHeader .imageDesc {
+    background-image: url(../img/pisoton/FOTO_SUPERIOR.JPG);
+    background-size: cover;
+    background-position: center;
+    flex-basis: 50% !important;
+}
+
+@media (max-width: 576px) {
+    .blogSliderWrapper #blogSlider_{
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+}

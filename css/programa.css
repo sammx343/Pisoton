@@ -1,0 +1,19 @@
+#videos.intern > article.internTopMsg{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#info.intern .textAndImageTitle{
+    font-size: 50px;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#info.intern .textAndImg img{
+    border-radius: 10px;
+    box-shadow: black 5px 5px 5px;
+}
+
+@media (max-width: 960px){
+    #info.intern .textAndImageTitle {
+        text-align: center;
+    }
+}

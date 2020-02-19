@@ -1984,9 +1984,6 @@ header .headerWrapper.pisotonB::before {
 #dataEmotion #dataEmotionHeader a {
   flex-basis: 25%;
 }
-#dataEmotion #dataEmotionHeader a:last-child .circleLink::after {
-  width: 0;
-}
 #dataEmotion #dataEmotionHeader .circleLink {
   display: inline-flex;
   background-position: center;
@@ -2316,14 +2313,14 @@ header .headerWrapper.pisotonB::before {
   transform: translate(-50%, 0);
 }
 #videos.intern h4 {
-  background: #85CCDB;
+  background: #68D5E1;
   color: #FFF;
   font-size: 50px;
   font-weight: 100;
   line-height: 53px;
   padding: 28px 0;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
 }
 
 #videos.intern > article {

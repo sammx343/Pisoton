@@ -1,5 +1,5 @@
 #videos.intern{
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 #main {
@@ -148,7 +148,7 @@
 
 @media (min-width: 768px){
     #videos.intern{
-        margin-top: 150px;
+        margin-top: 50px;
     }
 }
 

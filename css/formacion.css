@@ -1,0 +1,22 @@
+#videos.intern > article.internTopMsg{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#info.intern .textAndImageTitle{
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+#info.intern .textAndImg img, #blogImageSlider .blogImageSliderBox img{
+    border-radius: 10px;
+    box-shadow: black 5px 5px 5px;
+}
+
+#info.intern article .descBig{
+    font-size: 30px;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#info.intern .quotesWrapper .quote1{
+    font-style: normal;
+}

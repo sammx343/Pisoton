@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/components/article-card.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
@@ -202,7 +203,7 @@
                                       <p class="cardSubtitle">'+ category +'</p> \
                                       <p class="cardDescTitle"> '+ obj.datos[i]['title'] +'</p> \
                                       <div class="cardDesc">'+ obj.datos[i]['description'] +'</div> \
-                                      <a href="articles.php?f='+obj.datos[i]['tag'].split("@")[0]+'&article='+obj.datos[i]['idContent']+'">Ver más</a> \
+                                      <a class="article-link" href="articles.php?f='+obj.datos[i]['tag'].split("@")[0]+'&article='+obj.datos[i]['idContent']+'"></a> \
                                       '+ htmlImg +' \
                                     </article> \
                                   </div>';
