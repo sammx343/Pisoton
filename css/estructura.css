@@ -2,29 +2,22 @@
 
 #emotionHeader .imageDesc {
     background-image: url(../img/pisoton/organigrama.png);
-    background-color: #347EA1;
     background-size: contain;
-    flex-basis: 50% !important;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#emotionHeader div.title{
-    top: 0;
-    box-shadow: none;
-    transition: .5s all;
-}
-
-#emotionHeader div.title:hover {
-    top: -5px;
-    box-shadow: 5px 5px 5px black;
-    cursor: pointer;
 }
 
 #info.intern article .descBig{
     color: #88CCDB;
     flex-basis: 50%;
     font-size: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
+    font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
+#info.intern article .descSmall{
+    color: #000;
+    flex-basis: 50%;
+    font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
     font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
@@ -76,17 +69,6 @@ table#techniques{
 @media(max-width: 425px){
     #emotionHeader .imageDesc{
         background-size: 130%;
-    }
-}
-
-@media(max-width: 1024px){
-    #emotionHeader{
-        flex-direction: column;
-    }
-
-    #emotionHeader > div {
-        height: 50vh;
-        min-height: 400px;
     }
 }
 

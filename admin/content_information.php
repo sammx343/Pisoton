@@ -234,6 +234,7 @@
                                                 <option value="1">Maestros</option>
                                                 <option value="2">Pisotón</option>
                                                 <option value="3">Investigación</option>
+                                                <option value="4">Pisotón cuenta</option>
                                               </select>
                                             </div>
                                             <?php
@@ -528,7 +529,7 @@
                                                             <?php
                                                           }
                                                             if($contentType == 2){
-                                                              $options = array('Padres','Maestros','Pisotón','investigación');
+                                                              $options = array('Padres','Maestros','Pisotón','investigación', 'Pisotón cuenta');
                                                               $tag = '';
                                                               $section = '';
                                                               if($row['tag'] != ""){
@@ -764,7 +765,7 @@
           $('#editContentModal').modal('hide');
             if ($("#edit_title").val() != '' && $("#edit_description").html() != '' && $("#edit_author").val() != '')
             {
-                var optionsSelect = ['Padres','Maestros','Pisotón','Investigación'];
+                var optionsSelect = ['Padres','Maestros','Pisotón','Investigación', 'Pisotón cuenta'];
                 $('#myModal').modal('show');
                 var title = $("#edit_title").val();
                 var description = $("#edit_description").html();
@@ -880,7 +881,7 @@
           if($(this).siblings(".edit-category").length) {
             isCategory = 1;
             var category = $(this).siblings(".edit-category").html();
-            var optionsSelect = ['Padres','Maestros','Pisotón','investigación'];
+            var optionsSelect = ['Padres','Maestros','Pisotón','investigación', 'Pisotón cuenta'];
             var idSelected = optionsSelect.indexOf($(this).siblings(".edit-section").html());
             var optionsIndex = ['','','',''];
             if(idSelected != -1){
@@ -898,6 +899,7 @@
                                 <option value='1' "+ optionsIndex[1] +">Maestros</option> \
                                 <option value='2' "+ optionsIndex[2] +">Pisotón</option> \
                                 <option value='3' "+ optionsIndex[3] +">Investigación</option> \
+                                <option value='4' "+ optionsIndex[4] +">Pisotón cuenta</option> \
                               </select> \
                             </div>";
           }

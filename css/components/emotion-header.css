@@ -1,0 +1,32 @@
+#emotionHeader .imageDesc {
+    background-color: #347EA1;
+    background-size: contain;
+    flex-basis: 50% !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#emotionHeader .title{
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    transition: .25s all;
+}
+
+#emotionHeader .title:hover {
+    top: -5px;
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media(max-width: 1024px){
+    #emotionHeader{
+        flex-direction: column;
+    }
+
+    #emotionHeader > * {
+        height: 50vh;
+        min-height: 400px;
+    }
+}
