@@ -107,6 +107,7 @@
   <script>
     $(document).ready(function(){
         var callback = GetURLParameter('f');
+        var featuredArticle = {};
         switch (callback) {
           case '0':
             gtag('event', 'padres/artículos');
@@ -160,7 +161,7 @@
                               </div> \
                             </div>');
         }
-        $.ajax({
+        var allArticlesPromise = $.ajax({
           type: "POST",
           url: "https://comino.uninorte.edu.co/pisoton/admin/load_articles.php",
           data:{filter:'all'},
@@ -241,7 +242,8 @@
       var url_string = window.location.href;
       var url = new URL(url_string);
       var articleId = url.searchParams.get("article");
-      $.ajax({
+
+      var customArticlePromise = $.ajax({
           type: "POST",
           url: "https://comino.uninorte.edu.co/pisoton/admin/load_articles.php",
           data:{filter:articleId},
@@ -251,7 +253,7 @@
               var obj = JSON.parse(mensaje);
               if(obj.exito == "1" && obj.datos.length)
               {
-                console.log(obj.datos[0]);
+                featuredArticle = obj.datos[0];
                 $(".bottom .title").html(obj.datos[0]['title']);
                 $(".bottom .desc").html(obj.datos[0]['description']);
                 $(".bottom .author").html('Por: ' + obj.datos[0]['author']);
@@ -266,8 +268,6 @@
                   $('#prueba').modal('show');
                   $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
               }
-
-
           },
           error : function (mensaje)
           {
@@ -276,7 +276,55 @@
               $('#mensaje').text("Se produjo un error en la petición, Vuelva a intentarlo");
           }
       });
+
+      // --- Muestra el ultimo artículo pedido o el artículo más reciente en el banner ----
+      // Si se pidió un artículo en concreto, se debe esperar el resultado de ambas promesas (todos los artículos y el artículo pedido)
+      // ya que la respuesta es asincrona. No se asigna directamente el valor debido a que se debe estar seguro que el artículo pedido exista
+      // Si no se pidió un artículo en concreto asigna el artículo más reciente
+      if(articleId){
+        Promise.all([allArticlesPromise, customArticlePromise]).then( values => {
+          var allArticlesResponse = JSON.parse(values[0]); 
+          var featuredArticleResponse = JSON.parse(values[1]); 
+          
+          if( featuredArticleResponse.exito == "1" && featuredArticleResponse.datos.length ){
+            var featuredArticle = featuredArticleResponse.datos[0];
+            showFeaturedArticleSection(featuredArticle);
+          }else if( allArticlesResponse.exito == "1" && allArticlesResponse.datos.length ){
+            var featuredArticle = allArticlesResponse.datos[0];
+            showFeaturedArticleSection(featuredArticle);
+            $('#prueba').modal('show');
+            $("#mensaje").text("El artículo que solicitaste no existe o no se encuentra disponible");
+          }else{
+            $('#prueba').modal('show');
+            $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
+          }
+        });
+      }else{
+        allArticlesPromise.then( responseJSON => {
+          var response = JSON.parse(responseJSON);
+          
+          if(response.exito == "1" && response.datos.length){
+            var featuredArticle = response.datos[0];
+            showFeaturedArticleSection(featuredArticle);
+          }else{
+            $('#prueba').modal('show');
+            $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
+          }
+        })
+      }
     });
+
+    function showFeaturedArticleSection(article){
+      $(".bottom .title").html(article['title']);
+      $(".bottom .desc").html(article['description']);
+      $(".bottom .author").html('Por: ' + article['author']);
+      if(article['urlImage'] != null){
+        $(".bottom .blogImageSliderBox img").attr('src','admin/uploads/' + article['urlImage']);
+      }else{
+        $(".bottom #blogImageSliderWrapper").css({'display':'none'});
+      }
+    }
+
     function GetURLParameter(sParam){
         var sPageURL = window.location.search.substring(1);
         var sURLVariables = sPageURL.split('&');
