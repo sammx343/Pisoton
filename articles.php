@@ -166,7 +166,7 @@
           data:{filter:'all'},
           success: function(mensaje)
           {
-              //alert(mensaje);ç
+              //alert(mensaje);
               var obj = JSON.parse(mensaje);
               if(obj.exito == "1")
               {
@@ -185,6 +185,9 @@
                       break;
                     case '3':
                       section = "Investigación";
+                      break;
+                    case '4':
+                      section = "Pisotón cuenta";
                       break;
                     default:
                       section = "Pisotón";

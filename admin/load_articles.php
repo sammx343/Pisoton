@@ -16,7 +16,7 @@
   $contentType = '2';
   if($contentType != 0){
     if(isset($_POST['filter'])){
-      if($_POST['filter'] == 'all'){
+      if($_POST['filter'] == 'all' || ($_POST['filter'] > 0 && $_POST['filter'] < 5) ){
         $query = "SELECT * FROM Pis_content WHERE type = $contentType ORDER BY dateContent desc";
       }else{
         $articleId = $_POST['filter'];
