@@ -17,7 +17,7 @@
   if($contentType != 0){
     if(isset($_POST['filter'])){
       if($_POST['filter'] == 'all' || ($_POST['filter'] > 0 && $_POST['filter'] < 5) ){
-        $query = "SELECT * FROM Pis_content WHERE type = $contentType ORDER BY dateContent desc";
+        $query = "SELECT * FROM Pis_content WHERE type = $contentType AND tag NOT LIKE '4@%' ORDER BY dateContent desc";
       }else{
         $articleId = $_POST['filter'];
         $query = "SELECT * FROM Pis_content WHERE idContent = $articleId";
@@ -25,7 +25,7 @@
     }else{
       if(isset($_POST['filterArticles'])){
         $articleType = $_POST['filterArticles'].'@%';
-        $query = "SELECT * FROM Pis_content WHERE type = $contentType AND tag like '$articleType' ORDER BY dateContent desc limit 6";
+        $query = "SELECT * FROM Pis_content WHERE type = $contentType AND tag like '$articleType' ORDER BY dateContent desc";
       }else{
         $query = "SELECT * FROM Pis_content WHERE type = $contentType ORDER BY dateContent desc limit 6";
       }
