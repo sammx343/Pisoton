@@ -357,6 +357,13 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   transform: translate(-50%, -50%);
 }
 
+#loadMoreVideos, #loadLessVideos{
+  display: block;
+  margin: 10px auto;
+  position: initial !important;
+  width: 80px;
+}
+
 #main {
   background-image: radial-gradient(circle 1000px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
   position: relative;
@@ -1061,11 +1068,19 @@ header .headerWrapper.pisotonB::before {
   margin-top: -7px;
 }
 
+.page-counter{
+  text-align: center;
+  color: #68D5E1;
+  font-size: 30px;
+  font-family: "SnoopyReg", Arial, Helvetica, sans-serif;
+}
+
 .articles.card {
   color: #fff;
   margin-left: 7%;
   margin-right: 2%;
-  margin-top: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
   height: 330px;
   display: flex;
   flex-direction: column;

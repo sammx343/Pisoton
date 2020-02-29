@@ -58,6 +58,10 @@
   </section>
   <section id="videos" class="intern">
     <h4 class="sectionDivider">Artículos</h4>
+    <div class="page-counter">
+      <p> Página <span id="current-page"> 0 </span> de <span id="total-pages"></span></p>
+    </div>
+    <a href='#' class='btn' id='loadLessVideos'>Atrás</a>
     <div id='blogSliderWrapper' class="maxWidth" style='max-width: 1200px !important;margin-left: 0 !important;position: relative;left: 50%;transform: translate(-50%,0);'>
       <div id='blogSlider'>
       </div>
@@ -104,6 +108,7 @@
   <script src="js/libs/bootstrap/bootstrap.min.js"></script>
   <script src="js/mobileSelect.js"></script>
   <script src="js/handler.js"></script>
+  <script src="js/blogSlider.js"></script>
   <script>
     $(document).ready(function(){
         var callback = GetURLParameter('f');
@@ -212,8 +217,11 @@
                                     </article> \
                                   </div>';
                 }
-                $("#blogSlider").html(htmlArticles).parent().siblings('#loadMoreVideos').css({'right':'calc(50% - ' + $('#blogSliderWrapper').width()/2 + 'px)'});
-                fixHeight();
+
+                //--- Agrega los artículos al blogSlider
+                $("#blogSlider").html(htmlArticles).parent().siblings('#loadMoreVideos');
+
+                blogSlider.fixHeight();
               }
               else
               {
@@ -228,17 +236,7 @@
               $('#mensaje').text("Se produjo un error en la petición, Vuelva a intentarlo");
           }
       });
-      function fixHeight(){
-        setTimeout(function(){
-            containerHeight = ($(".blogSliderBox").height() + 40 + 1)*2 - 2;
-            if($("#blogSliderWrapper").height() != containerHeight){
-              $("#blogSliderWrapper").css({"height":containerHeight});
-              fixHeight();
-            }else{
-              $(window).scrollTop(1);
-            }
-          },500);
-      }
+
       var url_string = window.location.href;
       var url = new URL(url_string);
       var articleId = url.searchParams.get("article");
@@ -249,7 +247,6 @@
           data:{filter:articleId},
           success: function(mensaje)
           {
-              //alert(mensaje);
               var obj = JSON.parse(mensaje);
               if(obj.exito == "1" && obj.datos.length)
               {
@@ -277,41 +274,7 @@
           }
       });
 
-      // --- Muestra el ultimo artículo pedido o el artículo más reciente en el banner ----
-      // Si se pidió un artículo en concreto, se debe esperar el resultado de ambas promesas (todos los artículos y el artículo pedido)
-      // ya que la respuesta es asincrona. No se asigna directamente el valor debido a que se debe estar seguro que el artículo pedido exista
-      // Si no se pidió un artículo en concreto asigna el artículo más reciente
-      if(articleId){
-        Promise.all([allArticlesPromise, customArticlePromise]).then( values => {
-          var allArticlesResponse = JSON.parse(values[0]); 
-          var featuredArticleResponse = JSON.parse(values[1]); 
-          
-          if( featuredArticleResponse.exito == "1" && featuredArticleResponse.datos.length ){
-            var featuredArticle = featuredArticleResponse.datos[0];
-            showFeaturedArticleSection(featuredArticle);
-          }else if( allArticlesResponse.exito == "1" && allArticlesResponse.datos.length ){
-            var featuredArticle = allArticlesResponse.datos[0];
-            showFeaturedArticleSection(featuredArticle);
-            $('#prueba').modal('show');
-            $("#mensaje").text("El artículo que solicitaste no existe o no se encuentra disponible");
-          }else{
-            $('#prueba').modal('show');
-            $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
-          }
-        });
-      }else{
-        allArticlesPromise.then( responseJSON => {
-          var response = JSON.parse(responseJSON);
-          
-          if(response.exito == "1" && response.datos.length){
-            var featuredArticle = response.datos[0];
-            showFeaturedArticleSection(featuredArticle);
-          }else{
-            $('#prueba').modal('show');
-            $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
-          }
-        })
-      }
+      blogSlider.loadFeaturedArticlePromises(articleId, allArticlesPromise, customArticlePromise);
     });
 
     function showFeaturedArticleSection(article){
@@ -338,7 +301,5 @@
         }
       }
   </script>
-    <!--<script src="js/libs/jqueryValidate/jqueryvalidate.js"></script>-->
-    <!--<script src="js/formhandler.js"></script>-->
 </body>
 </html>

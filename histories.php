@@ -78,6 +78,10 @@
   </section>
   <section id="videos" class="intern">
     <h4 class="sectionDivider">Más gestadores de historias trascendentes</h4>
+    <div class="page-counter">
+      <p> Página <span id="current-page"> 0 </span> de <span id="total-pages"></span></p>
+    </div>
+    <a href='#' class='btn' id='loadLessVideos'>Atrás</a>
     <div id='blogSliderWrapper' class="maxWidth" style='max-width: 1200px !important;margin-left: 0 !important;position: relative;left: 50%;transform: translate(-50%,0);'>
       <div id='blogSlider'>
       </div>
@@ -124,6 +128,7 @@
   <script src="js/libs/bootstrap/bootstrap.min.js"></script>
   <script src="js/mobileSelect.js"></script>
   <script src="js/handler.js"></script>
+  <script src="js/blogSlider.js"></script>
   <script>
     $(document).ready(function(){
         var callback = GetURLParameter('f');
@@ -176,7 +181,7 @@
                               </div> \
                             </div>');
         }
-        $.ajax({
+        var allArticlesPromise = $.ajax({
           type: "POST",
           url: "https://comino.uninorte.edu.co/pisoton/admin/load_history.php",
           data:{filter:'all'},
@@ -188,6 +193,9 @@
               {
                 var htmlArticles = '';
                 for (var i = 0; i < obj.datos.length; i++) {
+                  
+                  htmlImg = '';
+                  classCSS = '';
                   if(obj.datos[i]['urlImage'] != null){
                     htmlImg = '<img class="backImg" src="admin/uploads/' + obj.datos[i]['urlImage'] + '">';
                     classCSS = 'withImg';
@@ -206,7 +214,7 @@
                 }
                 
                 $("#blogSlider").html(htmlArticles).parent().siblings('#loadMoreVideos').css({'right':'calc(50% - ' + $('#blogSliderWrapper').width()/2 + 'px)'});
-                fixHeight();
+                blogSlider.fixHeight();
               }
               else
               {
@@ -221,47 +229,14 @@
               $('#mensaje').text("Se produjo un error en la petición, Vuelva a intentarlo");
           }
       });
-      function fixHeight(){
-        setTimeout(function(){
-            containerHeight = ($(".blogSliderBox").height() + 40 + 1)*2 - 2;
-            if($("#blogSliderWrapper").height() != containerHeight){
-              $("#blogSliderWrapper").css({"height":containerHeight});
-              fixHeight();
-            }else{
-              $(window).scrollTop(1);
-            }
-          },500);
-      }
+
       var url_string = window.location.href;
       var url = new URL(url_string);
       var historyID = url.searchParams.get("history");
-      $.ajax({
+      var customArticlePromise = $.ajax({
           type: "POST",
           url: "https://comino.uninorte.edu.co/pisoton/admin/load_history.php",
           data:{filter:historyID},
-          success: function(mensaje)
-          {
-              //alert(mensaje);
-              var obj = JSON.parse(mensaje);
-              if(obj.exito == "1")
-              {
-                $(".bottom .title").html(obj.datos[0]['title']);
-                $(".bottom .desc").html(obj.datos[0]['description']);
-                //$(".bottom .author").html('Por: ' + obj.datos[0]['author']);
-                if(obj.datos[0]['urlImage'] != null){
-                  $(".bottom .blogImageSliderBox img").attr('src','admin/uploads/' + obj.datos[0]['urlImage']);
-                }else{
-                  $(".bottom #blogImageSliderWrapper").css({'display':'none'});
-                }
-              }
-              else
-              {
-                  $('#prueba').modal('show');
-                  $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
-              }
-
-
-          },
           error : function (mensaje)
           {
               $('#myModal').modal('hide');
@@ -269,7 +244,10 @@
               $('#mensaje').text("Se produjo un error en la petición, Vuelva a intentarlo");
           }
       });
+
+      blogSlider.loadFeaturedArticlePromises(historyID, allArticlesPromise, customArticlePromise);
     });
+
     function GetURLParameter(sParam){
         var sPageURL = window.location.search.substring(1);
         var sURLVariables = sPageURL.split('&');

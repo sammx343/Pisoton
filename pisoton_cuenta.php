@@ -58,6 +58,10 @@
   </section>
   <section id="videos" class="intern">
     <h4 class="sectionDivider">Pisotón cuenta</h4>
+    <div class="page-counter">
+      <p> Página <span id="current-page"> 0 </span> de <span id="total-pages"></span></p>
+    </div>
+    <a href='#' class='btn' id='loadLessVideos'>Atrás</a>
     <div id='blogSliderWrapper' class="maxWidth" style='max-width: 1200px !important;margin-left: 0 !important;position: relative;left: 50%;transform: translate(-50%,0);'>
       <div id='blogSlider'>
       </div>
@@ -104,6 +108,7 @@
   <script src="js/libs/bootstrap/bootstrap.min.js"></script>
   <script src="js/mobileSelect.js"></script>
   <script src="js/handler.js"></script>
+  <script src="js/blogSlider.js"></script>
   <script>
     $(document).ready(function(){
         var callback = GetURLParameter('f');
@@ -160,7 +165,7 @@
                               </div> \
                             </div>');
         }
-        $.ajax({
+        var allArticlesPromise = $.ajax({
           type: "POST",
           url: "https://comino.uninorte.edu.co/pisoton/admin/load_articles.php",
           data:{filterArticles:4},
@@ -171,7 +176,6 @@
               if(obj.exito == "1")
               {
                 article = obj.datos[0];
-                showLastArticleSection(article)
                 var htmlArticles = '';
                 for (var i = 0; i < obj.datos.length; i++) {
                   category = obj.datos[i]['tag'].split("@")[1];
@@ -208,13 +212,13 @@
                                       <p class="cardSubtitle">'+ category +'</p> \
                                       <p class="cardDescTitle"> '+ obj.datos[i]['title'] +'</p> \
                                       <div class="cardDesc">'+ obj.datos[i]['description'] +'</div> \
-                                      <a class="article-link" href="articles.php?f='+obj.datos[i]['tag'].split("@")[0]+'&article='+obj.datos[i]['idContent']+'"></a> \
+                                      <a class="article-link" href="pisoton_cuenta.php?f='+obj.datos[i]['tag'].split("@")[0]+'&article='+obj.datos[i]['idContent']+'"></a> \
                                       '+ htmlImg +' \
                                     </article> \
                                   </div>';
                 }
                 $("#blogSlider").html(htmlArticles).parent().siblings('#loadMoreVideos').css({'right':'calc(50% - ' + $('#blogSliderWrapper').width()/2 + 'px)'});
-                fixHeight();
+                blogSlider.fixHeight();
               }
               else
               {
@@ -229,39 +233,14 @@
               $('#mensaje').text("Se produjo un error en la petición, Vuelva a intentarlo");
           }
       });
-      function fixHeight(){
-        setTimeout(function(){
-            containerHeight = ($(".blogSliderBox").height() + 40 + 1)*2 - 2;
-            if($("#blogSliderWrapper").height() != containerHeight){
-              $("#blogSliderWrapper").css({"height":containerHeight});
-              fixHeight();
-            }else{
-              $(window).scrollTop(1);
-            }
-          },500);
-      }
+      
       var url_string = window.location.href;
       var url = new URL(url_string);
       var articleId = url.searchParams.get("article");
-      $.ajax({
+      var customArticlePromise = $.ajax({
           type: "POST",
           url: "https://comino.uninorte.edu.co/pisoton/admin/load_articles.php",
           data:{filter:articleId},
-          success: function(mensaje)
-          {
-              //alert(mensaje);
-              var obj = JSON.parse(mensaje);
-              if(obj.exito == "1" && obj.datos.length)
-              {
-                article = obj.datos[0];
-                showLastArticleSection(article)
-              }
-              else
-              {
-                  $('#prueba').modal('show');
-                  $("#mensaje").text("Se produjo un error en la petición, Vuelva a intentarlo");
-              }
-          },
           error : function (mensaje)
           {
               $('#myModal').modal('hide');
@@ -269,19 +248,8 @@
               $('#mensaje').text("Se produjo un error en la petición, Vuelva a intentarlo");
           }
       });
+      blogSlider.loadFeaturedArticlePromises(articleId, allArticlesPromise, customArticlePromise);
     });
-
-    function showLastArticleSection(article){
-      console.log(article);
-      $(".bottom .title").html(article['title']);
-      $(".bottom .desc").html(article['description']);
-      $(".bottom .author").html('Por: ' + article['author']);
-      if(article['urlImage'] != null){
-        $(".bottom .blogImageSliderBox img").attr('src','admin/uploads/' + article['urlImage']);
-      }else{
-        $(".bottom #blogImageSliderWrapper").css({'display':'none'});
-      }
-    }
 
     function GetURLParameter(sParam){
         var sPageURL = window.location.search.substring(1);

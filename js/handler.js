@@ -967,22 +967,33 @@ $(document).ready(function(){
 
   $('#videos').on('click', '#loadMoreVideos',function(event){
     event.preventDefault();
-    var totalPagesBlogSlider = Math.floor($("#blogSlider").height()/$("#blogSliderWrapper").height());
-    if (totalPagesBlogSlider - $("#blogSlider").height()/$("#blogSliderWrapper").height() == 0){
-      totalPagesBlogSlider--;
-    }
-    console.log(totalPagesBlogSlider);
+    totalPagesBlogSlider = getTotalPagesBlogSlider();
     activitiesPages++;
     if(activitiesPages > totalPagesBlogSlider){
       activitiesPages = 0;
     }
+    changePageCounter(activitiesPages, totalPagesBlogSlider);
+    moveBlogSlider();
+  });
+
+  $('#videos').on('click', '#loadLessVideos ',function(event){
+    event.preventDefault();
+    totalPagesBlogSlider = getTotalPagesBlogSlider();
+    activitiesPages--;
+    if(activitiesPages < 0){
+      activitiesPages = totalPagesBlogSlider;
+    }
+    changePageCounter(activitiesPages, totalPagesBlogSlider);
+    moveBlogSlider();
+  });
+
+  function moveBlogSlider(){
     $("#blogSlider").animate({
       top: -(activitiesPages)*($("#blogSliderWrapper").height() + 2)
     }, 1000, 'swing', function() {
         //alert("ok");
     });
-
-  });
+  }
 
   function isElementInViewport (el) {
 
@@ -1192,6 +1203,26 @@ $(document).ready(function(){
   loadAudio(0);
 
 });
+
+function getTotalPagesBlogSlider(){
+  var totalPagesBlogSlider = Math.floor($("#blogSlider").height()/$("#blogSliderWrapper").height());
+  if (totalPagesBlogSlider - $("#blogSlider").height()/$("#blogSliderWrapper").height() == 0){
+    totalPagesBlogSlider--;
+  }
+  return totalPagesBlogSlider;
+}
+
+function changePageCounter(currentPage, totalPages){
+  $(".page-counter #current-page").text(currentPage + 1);
+  $(".page-counter #total-pages").text(totalPages + 1);
+}
+
+function initSliderPages(){
+  var totalPages = getTotalPagesBlogSlider();
+  console.log(totalPages);
+  changePageCounter(0, totalPages);  
+}
+
 audioVolumen = 0.7;
 function loadAudio(changeSource){
   $("#playtoggle").removeClass('playing');
