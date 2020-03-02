@@ -78,6 +78,17 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 
+    <!-- Alertify JS -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <!-- Alertify JS -->
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -323,6 +334,9 @@
     <script src="dist/js/sb-admin-2.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
+    <!-- Alertify JS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
     <script type="text/javascript">
         var idEntry;
          $('#table_all_contents').DataTable({
@@ -331,6 +345,24 @@
             }
         });
         $('#add_description').wysiwyg();
+
+        var deletedFileEventConfirmation = true;
+        $('#content-delete').click( event => {
+          if(deletedFileEventConfirmation){
+            event.preventDefault();
+            alertify.confirm("Eliminar contenido", "¿De verdad deseas eliminar el contenido seleccionado?",
+              ()=>{
+                deletedFileEventConfirmation = false;
+                $('#content-delete').trigger('click');
+                alertify.success('El contenido fue borrado');
+              },
+              ()=>{
+                return;
+              }
+            );
+          }
+        });
+
         $("#add-content").click(function()
         {
           if ($("#add_title").val() != '' != '' && $("#add_description").html() != '')

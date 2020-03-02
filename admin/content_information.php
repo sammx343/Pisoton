@@ -151,8 +151,18 @@
 
     <link href="dist/css/estilo_admin.css" rel="stylesheet" type="text/css"/>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"><!-- JavaScript -->
 
+    <!-- Alertify JS -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <!-- Alertify JS -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -197,7 +207,6 @@
                               }
                             ?>
                           </ul>
-
 
                           <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="add_content">
@@ -642,6 +651,9 @@
     <script src="dist/js/sb-admin-2.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <!-- Alertify JS -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script type="text/javascript">
         var idEntry = <?php echo $idEntry;?>;
         var type = <?php echo $contentType;?>;
@@ -651,6 +663,23 @@
             }
         });
         $('#add_description').wysiwyg();
+
+        var deletedFileEventConfirmation = true;
+        $('#content-delete').click( event => {
+          if(deletedFileEventConfirmation){
+            event.preventDefault();
+            alertify.confirm("Eliminar contenido", "¿De verdad deseas eliminar el contenido seleccionado?",
+              ()=>{
+                deletedFileEventConfirmation = false;
+                $('#content-delete').trigger('click');
+                alertify.success('El contenido fue borrado');
+              },
+              ()=>{
+                return;
+              }
+            );
+          }
+        });
 
         $("#add-content").click(function()
         {
@@ -738,6 +767,8 @@
                             //SE AGREGO COREECTAMENTE
                             localStorage.setItem("registrado", true);
                             location.reload(true);
+
+                            alertify.success('El contenido fue agregado éxitosamente');
                         }
                         else
                         {
