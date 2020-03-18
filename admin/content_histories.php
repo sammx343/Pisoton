@@ -217,7 +217,7 @@
                                         mysql_set_charset('utf8',$connection);
 
 
-                                        $query = "SELECT * FROM Pis_historias";
+                                        $query = "SELECT * FROM Pis_historias ORDER BY date DESC";
 
                                         $result = mysql_query($query,$connection);
                                         $num_rows = mysql_num_rows($result);

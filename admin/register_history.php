@@ -55,8 +55,8 @@
           $pdoconnector->executeQuery($query,$parametros);
         }else{
           //ADD content
-          $query = 'INSERT INTO Pis_historias (title,urlImage,description) VALUES (:title,:urlImage,:description)';
-        	$parametros = array(':title'=> $title,':urlImage'=> $image_name, ':description'=> $description);
+          $query = 'INSERT INTO Pis_historias (title,urlImage,description, date) VALUES (:title,:urlImage,:description,:date)';
+        	$parametros = array(':title'=> $title,':urlImage'=> $image_name, ':description'=> $description,':date'=> date("Y-m-d H:i:s"));
           $pdoconnector->executeQuery($query,$parametros);
 
         }
